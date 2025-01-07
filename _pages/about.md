@@ -10,7 +10,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 
-**S**afety & **T**rustworthy **AI** **R**esarch (**STAR**) group studies AI safety and trustworthiness. We are part of the Key Laboratory of AI Safety, Chinese Academy of Sciences.
+**S**afety & **T**rustworthy **AI** **R**esarch (**STAR**) group studies AI safety and trustworthiness. We are part of the CAS Key Laboratory of AI Safety.
 
 At STAR Group, we believe interpretability is a key to building safe and trustworthy AI. Our research focuses on the knowledge mechanisms of AI models---how they learn, memorize, recall, update/edit, and forget knowledge. We also explore the security and privacy impacts of deploying AI in real-world applications, with a special focus on LLMs and recommender systems.
 
