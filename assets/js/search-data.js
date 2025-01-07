@@ -113,6 +113,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/example6/";
+            },},{id: "people-sunfei",
+          title: 'Sunfei',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/sunfei/";
             },},{id: "projects-minivla-a-better-vla-with-a-smaller-footprint",
           title: 'MiniVLA: A Better VLA with a Smaller Footprint',
           description: "Reducing OpenVLA&#39;s parameters 7x, and improving the input and output representation space.",
