@@ -9,11 +9,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography **here**. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+**S**afety & **T**rustworthy **AI** **R**esarch (**STAR**) group studies AI safety and trustworthiness. We are part of the Key Laboratory of AI Safety, Chinese Academy of Sciences.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+At STAR Group, we believe interpretability is a key to building safe and trustworthy AI. Our research focuses on the knowledge mechanisms of AI models---how they learn, memorize, recall, update/edit, and forget knowledge. We also explore the security and privacy impacts of deploying AI in real-world applications, with a special focus on LLMs and recommender systems.
 
 <br>
 <div style="color: red;">
