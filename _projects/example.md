@@ -1,10 +1,10 @@
 ---
 layout: project
-title: "MiniVLA: A Better VLA with a Smaller Footprint"
+title: "The Collapse of Model Editing"
 author:
-- Suneel Belkhale
-- Dorsa Sadigh
-description: Reducing OpenVLA's parameters 7x, and improving the input and output representation space.
+- Wanli Yang
+- Fei Sun
+description: The Collapse of Model Editing.
 img: feature.png
 time: 2024-01-02 15:59:00-0400
 ---
