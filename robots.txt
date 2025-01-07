@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://star-sf.github.io///sitemap.xml
+User-agent: * Disallow: Sitemap: https://star-sf.github.io//sitemap.xml
