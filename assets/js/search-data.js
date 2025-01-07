@@ -114,9 +114,9 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/sunfei/";
-            },},{id: "projects-minivla-a-better-vla-with-a-smaller-footprint",
-          title: 'MiniVLA: A Better VLA with a Smaller Footprint',
-          description: "Reducing OpenVLA&#39;s parameters 7x, and improving the input and output representation space.",
+            },},{id: "projects-the-collapse-of-model-editing",
+          title: 'The Collapse of Model Editing',
+          description: "The Collapse of Model Editing.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/example/";
             },},{
