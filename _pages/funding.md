@@ -6,4 +6,4 @@ nav: true
 nav_order: 5
 ---
 
-STAR Group sincerely thanks our generous sponsors for their invaluable support and partnership.
+We would like to thank the following sponsors and funding agencies for supporting our research: National Key R&D Program, Strategic Priority Research Program of CAS, BNSF, ICT, Meituan.
