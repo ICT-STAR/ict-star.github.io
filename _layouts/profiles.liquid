@@ -80,4 +80,33 @@ layout: default
       <div class="spacer"></div>
     {% endfor %}
   </div>
+  <div class="col-md-12">
+    <h2 class="text-center">Alumni</h2>
+    <div class="row justify-content-center">
+      {% for category in site.data.alumni %}
+        {% assign cat_key = category[0] %}
+        {% assign members = category[1] %}
+        {% if members.size > 0 %}
+          <div class="col-lg-3 col-md-4 col-sm-12">
+            <h3 class="mt-4">{{ cat_key }}</h3>
+            {% for member in members %}
+              <div class="mb-3">
+                {% if member.url %}
+                  <a href="{{ member.url }}">
+                    <strong>{{ member.name }}</strong>
+                  </a>
+                {% else %}
+                  <strong>{{ member.name }}</strong>
+                {% endif %}
+                {% if member.note %}
+                  <br>
+                  <span class="text-muted">{{ member.note }}</span>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
