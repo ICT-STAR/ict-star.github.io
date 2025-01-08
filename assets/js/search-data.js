@@ -94,6 +94,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/example6/";
+            },},{id: "people-jiajun",
+          title: 'Jiajun',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/jiajun/";
             },},{id: "people-sunfei",
           title: 'Sunfei',
           description: "",
