@@ -1,34 +1,19 @@
-"Fei Sun":
+"sun":
   - firstname: ["Fei"]
     url: http://ofey.me
 
-"Jiajun Tan":
+"tan":
   - firstname: ["Jiajun"]
     url: https://sumsky21.github.io/
 
-"Wanli Yang":
+"yang":
   - firstname: ["Wanli"]
     url: https://yangwl.site/
 
-"Xun Liu":
+"liu":
   - firstname: ["Xun"]
     url: https://antiquality.github.io/
 
-"Hexiang Tan":
+"tan":
   - firstname: ["Hexiang"]
     url: https://tan-hexiang.github.io/
-# "przibram":
-#   - firstname: ["Karl"]
-#     url: https://link.springer.com/article/10.1007/s00016-019-00242-z
-
-# "schrodinger":
-#   - firstname: ["Erwin"]
-#     url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
-
-# "lorentz":
-#   - firstname: ["Hendrik Antoon"]
-#     url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-# "planck":
-#   - firstname: ["Max"]
-#     url: https://en.wikipedia.org/wiki/Max_Planck
