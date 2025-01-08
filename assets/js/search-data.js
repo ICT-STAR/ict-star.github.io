@@ -84,17 +84,7 @@ ninja.data = [{
           section: "News",},{id: "news-we-will-hold-the-1st-workshop-on-human-centered-recommender-systems-on-www-25-contributions-are-welcome",
           title: 'We will hold The 1st Workshop on Human-Centered Recommender Systems on WWW 25....',
           description: "",
-          section: "News",},{id: "people-example2",
-          title: 'Example2',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/example2/";
-            },},{id: "people-example6",
-          title: 'Example6',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/example6/";
-            },},{id: "people-jiajun",
+          section: "News",},{id: "people-jiajun",
           title: 'Jiajun',
           description: "",
           section: "People",handler: () => {
@@ -140,7 +130,7 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
+          window.open("https://scholar.google.com/citations?user=OlRxBhcAAAAJ", "_blank");
         },
       },{
         id: 'social-custom_social',
