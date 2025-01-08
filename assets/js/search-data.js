@@ -88,9 +88,9 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/xunliu.html";
-            },},{id: "projects-the-collapse-of-model-editing",
-          title: 'The Collapse of Model Editing',
-          description: "The Collapse of Model Editing.",
+            },},{id: "projects-model-editing",
+          title: 'Model Editing',
+          description: "Model Editing.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/example/";
             },},{
