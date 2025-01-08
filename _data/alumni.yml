@@ -1,0 +1,32 @@
+phd:
+
+master:
+
+undergraduate:
+
+intern:
+  - name: "Chong Chen"
+    url: "https://chenchongthu.github.io/"
+    note: "THU PhD; Huawei now"
+
+  - name: "Shiwen Wu"
+    url: "https://scholar.google.com/citations?user=9tbaXDIAAAAJ"
+    note: "PhD Student at HKUST, now"
+
+  - name: "Shuchang Liu"
+    url: "https://scholar.google.com/citations?user=kivnB4QAAAAJ"
+    note: "Rutgers PhD; Kuaishou, now"
+
+  - name: "Zhuofeng Wu"
+    url: "https://scholar.google.com/citations?user=bqinFgYAAAAJ"
+    note: "UMich PhD, now at Amazon"
+
+  - name: "Xu Xie"
+    note: "PKU PhD; JQ Investments, now"
+
+  - name: "Yuan Zhang"
+    note: "PKU PhD; Kuaishou, now"
+
+  - name: "Tianshu Lv"
+    note: "PKU PhD"
+
