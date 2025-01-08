@@ -15,7 +15,10 @@
   color: "#4E52A6"
 
 "WebConf":
-  color: "#535FA6"
+  color: "#3F7373"
+
+"WebConf (short)":
+  color: "#3F7373"
 
 "NeurIPS":
   url: https://neurips.cc
