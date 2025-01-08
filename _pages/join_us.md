@@ -16,7 +16,6 @@ We welcome motivated undergraduate students to join our research group! We expec
 
 ## Outside of UCAS
 
-
 We are looking for highly motivated interns to join our research group! Applicants should have a strong interest in Artificial Intelligence (AI) and Natural Language Processing (NLP), along with some prior experience in Machine Learning (ML) or related areas (prior research experience is preferred but not required).
 We require a minimum commitment of 6 months to ensure high-quality research outcomes. Longer-term internships are highly encouraged.
 
