@@ -10,12 +10,13 @@
   - firstname: ["Wanli"]
     url: https://yangwl.site/
 
-# "bach":
-#   - firstname: ["Johann Sebastian", "J. S."]
-#     url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Xun":
+  - firstname: ["Xun"]
+    url: https://antiquality.github.io/
 
-#   - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-#     url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Hexiang":
+  - firstname: ["Hexiang"]
+    url: https://tan-hexiang.github.io/
 
 # "przibram":
 #   - firstname: ["Karl"]
