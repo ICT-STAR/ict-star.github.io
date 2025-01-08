@@ -1,17 +1,21 @@
 ---
 layout: default
 ---
-
 <div class="post">
   <div class="article text-center">
     <h2>Funding</h2>
-    <p>{{content}}</p>
+    <p>{{ content }}</p>
     <div class="row justify-content-center">
       {% for sponsor in site.data.funding %}
         <div class="col-lg-2 col-md-3 col-sm-12 mb-4">
           <div class="h-100">
             <a href="{{ sponsor.link }}" target="_blank">
-              <img src="{{ sponsor.logo | prepend: '/assets/img/funding/' | relative_url }}" alt="{{ sponsor.name }}" class="card-img-top mx-auto mt-3" style="width: 100px; height: 100px;">
+              <img
+                src="{{ sponsor.logo | prepend: '/assets/img/funding/' | relative_url }}"
+                alt="{{ sponsor.name }}"
+                class="card-img-top mx-auto mt-3"
+                style="width: 100px; height: 100px;"
+              >
             </a>
           </div>
         </div>

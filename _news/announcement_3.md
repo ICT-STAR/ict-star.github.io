@@ -6,4 +6,3 @@ related_posts: false
 ---
 
 Our paper [The Fall of ROME](https://aclanthology.org/2024.findings-emnlp.236/) is accepted by EMNLP2024 finding. Congrats to Wanli!
-

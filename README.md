@@ -1,14 +1,16 @@
 # 使用指南
 
 ## About
+
 - 内容: 修改`/_pages/about.md`
 - 图片: 修改`_data/carousel.yml`
   - 需要填写：
-    -  `image`：图片名称，如`1.jpg`，置于`/assets/img/carousel/`文件夹下
-    -  `caption`：图片描述
-  -  图片按照填写顺序展示
+    - `image`：图片名称，如`1.jpg`，置于`/assets/img/carousel/`文件夹下
+    - `caption`：图片描述
+  - 图片按照填写顺序展示
 
 ## News
+
 - 在`_news/`文件夹下创建新的markdown文件，如`announcement_1.md`
   - 模板如下：
     ```
@@ -22,6 +24,7 @@
     ```
 
 ## People
+
 - 在`_people/`文件夹下创建新的markdown文件，如`zhangsan.md`，模板如下：
   ```
   ---
@@ -45,6 +48,7 @@
   ```
 
 ## Projects
+
 - 在`_projects/`文件夹下创建新的markdown文件，如`project_1.md`
   - 模板如下：
     ```
@@ -62,6 +66,7 @@
     ```
 
 ## Publications
+
 - 编辑`_bibliography/papers.bib`文件
   - 模板如下：
     ```
@@ -88,10 +93,11 @@
     video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ}, # 添加视频链接
     additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)}, # 添加额外信息，位于期刊名称旁
     annotation={* Example use of superscripts<br>† Albert Einstein}, # 添加注释，位于作者旁
-  }
+    }
     ```
 
 ## Funding
+
 - 文案：`_pages/funding.md`
 - 机构logo：`_data/funding.yml`
   - 需要填写：
@@ -100,9 +106,11 @@
     - `url`：机构链接
 
 ## Join Us
+
 - 内容：`_pages/join_us.md`
 
 ## Markdown说明
+
 - 公式：
   - 行内公式：使用`$$`包裹公式，如`$$E=mc^2$$`
   - 块级公式：使用`$$`包裹公式，并另起一行，如
@@ -112,6 +120,7 @@
     $$
     ```
 - 图片：
+
   - 格式1：`![alt](url)`，如`![example](assets/img/example.png)`，
   - 格式2：`{% include figure.liquid path="example.png" alt="example" %}`，如`{% include figure.liquid path="example.png" alt="example" %}`
   - 图注: `<div class="caption">图注</div>`

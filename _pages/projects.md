@@ -51,4 +51,3 @@ horizontal: false
     </div>
     {% endfor %}
 </div>
-

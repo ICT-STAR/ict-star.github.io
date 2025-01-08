@@ -4,8 +4,8 @@ layout: default
 <div class="container">
   <div class="row text-center justify-content-center">
     <!-- Faculty Section -->
-    {% assign categories = "faculty,phd,master,undergraduate" | split: "," %}
-    {% assign category_names = "Faculty,PhD Students,Master Students,Undergraduate Students" | split: "," %}
+    {% assign categories = 'faculty,phd,master,undergraduate' | split: ',' %}
+    {% assign category_names = 'Faculty,PhD Students,Master Students,Undergraduate Students' | split: ',' %}
     {% for category in categories %}
       {% assign index = forloop.index0 %}
       <div class="col-md-12">
@@ -17,12 +17,22 @@ layout: default
                 <div class="h-100 person-card">
                   {% if person.homepage %}
                     <a href="{{ person.homepage }}" target="_blank">
-                      <img src="{{ person.photo | prepend: '/assets/img/people/' | relative_url }}" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="{{ person.name }}">
+                      <img
+                        src="{{ person.photo | prepend: '/assets/img/people/' | relative_url }}"
+                        class="card-img-top rounded-circle mx-auto mt-3"
+                        style="width: 150px; height: 150px;"
+                        alt="{{ person.name }}"
+                      >
                     </a>
                   {% else %}
-                    <img src="{{ person.photo | prepend: '/assets/img/people/' | relative_url }}" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="{{ person.name }}">
+                    <img
+                      src="{{ person.photo | prepend: '/assets/img/people/' | relative_url }}"
+                      class="card-img-top rounded-circle mx-auto mt-3"
+                      style="width: 150px; height: 150px;"
+                      alt="{{ person.name }}"
+                    >
                   {% endif %}
-                  
+
                   <div class="card-body">
                     {% if person.homepage %}
                       <a href="{{ person.homepage }}" target="_blank">

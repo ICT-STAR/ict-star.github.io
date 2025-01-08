@@ -189,8 +189,8 @@
   <script>
     MathJax = {
       tex: {
-        inlineMath: [['\\(', '\\)']]
-      }
+        inlineMath: [['\\(', '\\)']],
+      },
     };
   </script>
   <script
@@ -322,12 +322,12 @@
   <script defer src="{{ '/assets/js/newsletter.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
-{% if page.url == "/" %}
+{% if page.url == '/' %}
   <script>
     $(document).ready(function() {
       // 获取轮播图的标题数据
       var captions = {{ site.data.carousel | jsonify }};
-      
+
       // 定义更新标题的函数
       function updateCaption(index) {
         $('#dynamic-caption').text(captions[index].caption);

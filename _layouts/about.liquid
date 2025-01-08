@@ -4,11 +4,17 @@ layout: default
 <div class="post">
   <header class="post-header d-flex align-items-center">
     {% if site.icon_enabled %}
-      <img src="{{ site.icon | prepend: '/assets/img/' | relative_url}}" alt="{{ site.name }} {{ site.type }}" class="mr-2 align-self-start" style="height: 72px;">
+      <img
+        src="{{ site.icon | prepend: '/assets/img/' | relative_url}}"
+        alt="{{ site.name }} {{ site.type }}"
+        class="mr-2 align-self-start"
+        style="height: 72px;"
+      >
     {% endif %}
     <div>
       <h1 class="post-title mb-0">
-        {{ site.name }} {{ site.type }}
+        {{ site.name }}
+        {{ site.type }}
       </h1>
       <p class="desc" style="margin-bottom: 0;">{{ page.subtitle }}</p>
     </div>
@@ -31,21 +37,26 @@ layout: default
               <!-- 轮播（Carousel）指标 -->
               <ol class="carousel-indicators">
                 {% for item in site.data.carousel %}
-                  <li data-target="#myCarousel" 
-                      data-slide-to="{{ forloop.index0 }}" 
-                      {% if forloop.first %}class="active"{% endif %}>
-                  </li>
+                  <li
+                    data-target="#myCarousel"
+                    data-slide-to="{{ forloop.index0 }}"
+                    {% if forloop.first %}
+                      class="active"
+                    {% endif %}
+                  ></li>
                 {% endfor %}
-              </ol>   
+              </ol>
 
               <!-- 轮播（Carousel）项目 -->
               <div class="carousel-inner">
                 {% for item in site.data.carousel %}
                   <div class="carousel-item {% if forloop.first %}active{% endif %}">
                     <div class="carousel-wrapper">
-                      <img src="{{ item.image | prepend: '/assets/img/carousel/' | relative_url }}" 
-                           class="d-block w-100 carousel-image" 
-                           alt="{{ item.caption }}">
+                      <img
+                        src="{{ item.image | prepend: '/assets/img/carousel/' | relative_url }}"
+                        class="d-block w-100 carousel-image"
+                        alt="{{ item.caption }}"
+                      >
                     </div>
                   </div>
                 {% endfor %}
@@ -91,6 +102,5 @@ layout: default
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
- 
   </article>
 </div>
