@@ -818,6 +818,10 @@ footer.sticky-bottom {
 
       .badges {
         padding-bottom: 0.5rem;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
+        display: inline-block;
         span {
           display: inline-block;
           color: $black-color;
