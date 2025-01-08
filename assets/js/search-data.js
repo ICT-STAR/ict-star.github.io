@@ -89,21 +89,6 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/example2/";
-            },},{id: "people-example3",
-          title: 'Example3',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/example3/";
-            },},{id: "people-example4",
-          title: 'Example4',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/example4/";
-            },},{id: "people-example5",
-          title: 'Example5',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/example5/";
             },},{id: "people-example6",
           title: 'Example6',
           description: "",
