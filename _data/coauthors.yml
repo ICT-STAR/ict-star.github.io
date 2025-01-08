@@ -1,14 +1,14 @@
-# "adams":
-#   - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-#     url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"adams":
+  - firstname: ["Fei"]
+    url: http://ofey.me
 
-# "podolsky":
-#   - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-#     url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Jiajun Tan":
+  - firstname: ["Jiajun"]
+    url: https://sumsky21.github.io/
 
-# "rosen":
-#   - firstname: ["Nathan", "N."]
-#     url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Wanli":
+  - firstname: ["Wanli"]
+    url: https://yangwl.site/
 
 # "bach":
 #   - firstname: ["Johann Sebastian", "J. S."]
