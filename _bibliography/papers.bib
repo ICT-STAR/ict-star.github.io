@@ -113,6 +113,36 @@ location = {Singapore, Singapore},
 series = {WWW '24}
 }
 
+@inproceedings{
+zhang2024understanding,
+title={Understanding and Improving Adversarial Collaborative Filtering for Robust Recommendation},
+author={Kaike Zhang and Qi Cao and Yunfan Wu and Fei Sun and Huawei Shen and Xueqi Cheng},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+url={https://openreview.net/forum?id=k8AYft5ED1}
+}
+
+
+@article{Chen-2023-privacy,
+author = {Chen, Ziqian and Sun, Fei and Tang, Yifan and Chen, Haokun and Gao, Jinyang and Ding, Bolin},
+title = {Studying the Impact of Data Disclosure Mechanism in Recommender Systems via Simulation},
+year = {2023},
+issue_date = {July 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {41},
+number = {3},
+issn = {1046-8188},
+url = {https://doi.org/10.1145/3569452},
+doi = {10.1145/3569452},
+abstract = {Recently, privacy issues in web services that rely on users’ personal data have raised great attention. Despite that recent regulations force companies to offer choices for each user to opt-in or opt-out of data disclosure, real-world applications usually only provide an “all or nothing” binary option for users to either disclose all their data or preserve all data with the cost of no personalized service. In this article, we argue that such a binary mechanism is not optimal for both consumers and platforms. To study how different privacy mechanisms affect users’ decisions on information disclosure and how users’ decisions affect the platform’s revenue, we propose a privacy-aware recommendation framework that gives users fine control over their data. In this new framework, users can proactively control which data to disclose based on the tradeoff between anticipated privacy risks and potential utilities. Then we study the impact of different data disclosure mechanisms via simulation with reinforcement learning due to the high cost of real-world experiments. The results show that the platform mechanisms with finer split granularity and more unrestrained disclosure strategy can bring better results for both consumers and platforms than the “all or nothing” mechanism adopted by most real-world applications.},
+journal = {ACM Trans. Inf. Syst.},
+month = feb,
+articleno = {60},
+numpages = {26},
+keywords = {GDPR, privacy, Recommender system}
+}
+
 @inproceedings{xie-etal-2021-factual-consistency,
     title = "Factual Consistency Evaluation for Text Summarization via Counterfactual Estimation",
     author = "Xie, Yuexiang  and
@@ -135,4 +165,125 @@ series = {WWW '24}
     abstract = "Despite significant progress has been achieved in text summarization, factual inconsistency in generated summaries still severely limits its practical applications. Among the key factors to ensure factual consistency, a reliable automatic evaluation metric is the first and the most crucial one. However, existing metrics either neglect the intrinsic cause of the factual inconsistency or rely on auxiliary tasks, leading to an unsatisfied correlation with human judgments or increasing the inconvenience of usage in practice. In light of these challenges, we propose a novel metric to evaluate the factual consistency in text summarization via counterfactual estimation, which formulates the causal relationship among the source document, the generated summary, and the language prior. We remove the effect of language prior, which can cause factual inconsistency, from the total causal effect on the generated summary, and provides a simple yet effective way to evaluate consistency without relying on other auxiliary tasks. We conduct a series of experiments on three public abstractive text summarization datasets, and demonstrate the advantages of the proposed metric in both improving the correlation with human judgments and the convenience of usage. The source code is available at \url{https://github.com/xieyxclack/factual_coco}."
 }
 
+@article{Wu-2022-GNN,
+author = {Wu, Shiwen and Sun, Fei and Zhang, Wentao and Xie, Xu and Cui, Bin},
+title = {Graph Neural Networks in Recommender Systems: A Survey},
+year = {2022},
+issue_date = {May 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {55},
+number = {5},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3535101},
+doi = {10.1145/3535101},
+abstract = {With the explosive growth of online information, recommender systems play a key role to alleviate such information overload. Due to the important application value of recommender systems, there have always been emerging works in this field. In recommender systems, the main challenge is to learn the effective user/item representations from their interactions and side information (if any). Recently, graph neural network (GNN) techniques have been widely utilized in recommender systems since most of the information in recommender systems essentially has graph structure and GNN has superiority in graph representation learning. This article aims to provide a comprehensive review of recent research efforts on GNN-based recommender systems. Specifically, we provide a taxonomy of GNN-based recommendation models according to the types of information used and recommendation tasks. Moreover, we systematically analyze the challenges of applying GNN on different types of data and discuss how existing works in this field address these challenges. Furthermore, we state new perspectives pertaining to the development of this field. We collect the representative papers along with their open-source implementations in .},
+journal = {ACM Comput. Surv.},
+month = dec,
+articleno = {97},
+numpages = {37},
+keywords = {survey, graph neural network, Recommender system}
+}
+
+@inproceedings{xie-2022-Contrastive,
+  author={Xie, Xu and Sun, Fei and Liu, Zhaoyang and Wu, Shiwen and Gao, Jinyang and Zhang, Jiandong and Ding, Bolin and Cui, Bin},
+  booktitle={2022 IEEE 38th International Conference on Data Engineering (ICDE)}, 
+  title={Contrastive Learning for Sequential Recommendation}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1259-1273},
+  keywords={Computer vision;Conferences;Multitasking;Data engineering;Data models;Behavioral sciences;Data mining;Contrastive Learning;Deep Learning;Recom-mender Systems},
+  doi={10.1109/ICDE53745.2022.00099}}
+
+@inproceedings{Chen-2022-unlearn,
+author = {Chen, Chong and Sun, Fei and Zhang, Min and Ding, Bolin},
+title = {Recommendation Unlearning},
+year = {2022},
+isbn = {9781450390965},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3485447.3511997},
+doi = {10.1145/3485447.3511997},
+abstract = {Recommender systems provide essential web services by learning users’ personal preferences from collected data. However, in many cases, systems also need to forget some training data. From the perspective of privacy, users desire a tool to erase the impacts of their sensitive data from the trained models. From the perspective of utility, if a system’s utility is damaged by some bad data, the system needs to forget such data to regain utility. While unlearning is very important, it has not been well-considered in existing recommender systems. Although there are some researches have studied the problem of machine unlearning, existing methods can not be directly applied to recommendation as they are unable to consider the collaborative information. In this paper, we propose RecEraser, a general and efficient machine unlearning framework tailored to recommendation tasks. The main idea of RecEraser is to divide the training set into multiple shards and train submodels with these shards. Specifically, to keep the collaborative information of the data, we first design three novel data partition algorithms to divide training data into balanced groups. We then further propose an adaptive aggregation method to improve the global model utility. Experimental results on three public benchmarks show that RecEraser can not only achieve efficient unlearning but also outperform the state-of-the-art unlearning methods in terms of model utility. The source code can be found at https://github.com/chenchongthu/Recommendation-Unlearning},
+booktitle = {Proceedings of the ACM Web Conference 2022},
+pages = {2768–2777},
+numpages = {10},
+keywords = {Collaborative Filtering;, Machine Unlearning, Recommender Systems, Selective Deletion},
+location = {Virtual Event, Lyon, France},
+series = {WWW '22}
+}
+
+@inproceedings{Liu-2021-Slate,
+author = {Liu, Shuchang and Sun, Fei and Ge, Yingqiang and Pei, Changhua and Zhang, Yongfeng},
+title = {Variation Control and Evaluation for Generative Slate Recommendations},
+year = {2021},
+isbn = {9781450383127},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3442381.3449864},
+doi = {10.1145/3442381.3449864},
+abstract = {Slate recommendation generates a list of items as a whole instead of ranking each item individually, so as to better model the intra-list positional biases and item relations. In order to deal with the enormous combinatorial space of slates, recent work considers a generative solution so that a slate distribution can be directly modeled. However, we observe that such approaches—despite their proved effectiveness in computer vision—suffer from a trade-off dilemma in recommender systems: when focusing on reconstruction, they easily over-fit the data and hardly generate satisfactory recommendations; on the other hand, when focusing on satisfying the user interests, they get trapped in a few items and fail to cover the item variation in slates. In this paper, we propose to enhance the accuracy-based evaluation with slate variation metrics to estimate the stochastic behavior of generative models. We illustrate that instead of reaching to one of the two undesirable extreme cases in the dilemma, a valid generative solution resides in a narrow “elbow” region in between. And we show that item perturbation can enforce slate variation and mitigate the over-concentration of generated slates, which expand the “elbow” performance to an easy-to-find region. We further propose to separate a pivot selection phase from the generation process so that the model can apply perturbation before generation. Empirical results show that this simple modification can provide even better variance with the same level of accuracy compared to post-generation perturbation methods.},
+booktitle = {Proceedings of the Web Conference 2021},
+pages = {436–448},
+numpages = {13},
+keywords = {Conditional Variational Auto-Encoder, Generative Recommendation, Slate Recommendation},
+location = {Ljubljana, Slovenia},
+series = {WWW '21}
+}
+
+@article{Zhang-2020-graph,
+author = {Zhang, Yuan and Sun, Fei and Yang, Xiaoyong and Xu, Chen and Ou, Wenwu and Zhang, Yan},
+title = {Graph-based Regularization on Embedding Layers for Recommendation},
+year = {2020},
+issue_date = {January 2021},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {39},
+number = {1},
+issn = {1046-8188},
+url = {https://doi.org/10.1145/3414067},
+doi = {10.1145/3414067},
+abstract = {Neural networks have been extensively used in recommender systems. Embedding layers are not only necessary but also crucial for neural models in recommendation as a typical discrete task. In this article, we argue that the widely used l2 regularization for normal neural layers (e.g., fully connected layers) is not ideal for embedding layers from the perspective of regularization theory in Reproducing Kernel Hilbert Space. More specifically, the l2 regularization corresponds to the inner product and the distance in the Euclidean space where correlations between discrete objects (e.g., items) are not well captured. Inspired by this observation, we propose a graph-based regularization approach to serve as a counterpart of the l2 regularization for embedding layers. The proposed regularization incurs almost no extra computational overhead especially when being trained with mini-batches. We also discuss its relationships to other approaches (namely, data augmentation, graph convolution, and joint learning) theoretically. We conducted extensive experiments on five publicly available datasets from various domains with two state-of-the-art recommendation models. Results show that given a kNN (k-nearest neighbor) graph constructed directly from training data without external information, the proposed approach significantly outperforms the l2 regularization on all the datasets and achieves more notable improvements for long-tail users and items.},
+journal = {ACM Trans. Inf. Syst.},
+month = sep,
+articleno = {2},
+numpages = {27},
+keywords = {neural recommender system, graph-based regularization, Embedding}
+}
+
+@inproceedings{Lin-2019-pareto,
+author = {Lin, Xiao and Chen, Hongjie and Pei, Changhua and Sun, Fei and Xiao, Xuanji and Sun, Hanxiao and Zhang, Yongfeng and Ou, Wenwu and Jiang, Peng},
+title = {A pareto-efficient algorithm for multiple objective optimization in e-commerce recommendation},
+year = {2019},
+isbn = {9781450362436},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3298689.3346998},
+doi = {10.1145/3298689.3346998},
+abstract = {Recommendation with multiple objectives is an important but difficult problem, where the coherent difficulty lies in the possible conflicts between objectives. In this case, multi-objective optimization is expected to be Pareto efficient, where no single objective can be further improved without hurting the others. However existing approaches to Pareto efficient multi-objective recommendation still lack good theoretical guarantees.In this paper, we propose a general framework for generating Pareto efficient recommendations. Assuming that there are formal differentiable formulations for the objectives, we coordinate these objectives with a weighted aggregation. Then we propose a condition ensuring Pareto efficiency theoretically and a two-step Pareto efficient optimization algorithm. Meanwhile the algorithm can be easily adapted for Pareto Frontier generation and fair recommendation selection. We specifically apply the proposed framework on E-Commerce recommendation to optimize GMV and CTR simultaneously. Extensive online and offline experiments are conducted on the real-world E-Commerce recommender system and the results validate the Pareto efficiency of the framework.To the best of our knowledge, this work is among the first to provide a Pareto efficient framework for multi-objective recommendation with theoretical guarantees. Moreover, the framework can be applied to any other objectives with differentiable formulations and any model with gradients, which shows its strong scalability.},
+booktitle = {Proceedings of the 13th ACM Conference on Recommender Systems},
+pages = {20–28},
+numpages = {9},
+keywords = {learning to rank, multiple obecjtive optimization, pareto efficiency, recommendation},
+location = {Copenhagen, Denmark},
+series = {RecSys '19}
+}
+@inproceedings{fei-2019-BERT4REC,
+author = {Sun, Fei and Liu, Jun and Wu, Jian and Pei, Changhua and Lin, Xiao and Ou, Wenwu and Jiang, Peng},
+title = {BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer},
+year = {2019},
+isbn = {9781450369763},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3357384.3357895},
+doi = {10.1145/3357384.3357895},
+abstract = {Modeling users' dynamic preferences from their historical behaviors is challenging and crucial for recommendation systems. Previous methods employ sequential neural networks to encode users' historical interactions from left to right into hidden representations for making recommendations. Despite their effectiveness, we argue that such left-to-right unidirectional models are sub-optimal due to the limitations including: begin enumerate* [label=seriesitshapealph*upshape)] item unidirectional architectures restrict the power of hidden representation in users' behavior sequences; item they often assume a rigidly ordered sequence which is not always practical. end enumerate* To address these limitations, we proposed a sequential recommendation model called BERT4Rec, which employs the deep bidirectional self-attention to model user behavior sequences. To avoid the information leakage and efficiently train the bidirectional model, we adopt the Cloze objective to sequential recommendation, predicting the random masked items in the sequence by jointly conditioning on their left and right context. In this way, we learn a bidirectional representation model to make recommendations by allowing each item in user historical behaviors to fuse information from both left and right sides. Extensive experiments on four benchmark datasets show that our model outperforms various state-of-the-art sequential models consistently.},
+booktitle = {Proceedings of the 28th ACM International Conference on Information and Knowledge Management},
+pages = {1441–1450},
+numpages = {10},
+keywords = {sequential recommendation, cloze, bidirectional sequential model},
+location = {Beijing, China},
+series = {CIKM '19}
+}
 
