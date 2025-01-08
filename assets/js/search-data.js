@@ -84,7 +84,12 @@ ninja.data = [{
           section: "News",},{id: "news-we-will-hold-the-1st-workshop-on-human-centered-recommender-systems-on-www-25-contributions-are-welcome",
           title: 'We will hold The 1st Workshop on Human-Centered Recommender Systems on WWW 25....',
           description: "",
-          section: "News",},{id: "people-jiajun",
+          section: "News",},{id: "people-haowenli",
+          title: 'Haowenli',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/haowenli.html";
+            },},{id: "people-jiajun",
           title: 'Jiajun',
           description: "",
           section: "People",handler: () => {
