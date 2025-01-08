@@ -39,3 +39,7 @@
 "RecSys":
   url: https://recsys.acm.org
   color: "#593A27"
+
+"SIGIR":
+  url: https://sigir.org
+  color: "#593A27"
