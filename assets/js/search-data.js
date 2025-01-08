@@ -114,6 +114,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/sunfei/";
+            },},{id: "people-xunliu",
+          title: 'Xunliu',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/xunliu/";
             },},{id: "projects-the-collapse-of-model-editing",
           title: 'The Collapse of Model Editing',
           description: "The Collapse of Model Editing.",
