@@ -12,7 +12,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with modified <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: AI Safety, Fei Sun, LLM, Recommendation, Recommender System # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon_enabled: false
 icon: logo.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -86,9 +86,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
+blog_name: #al-folio # blog_name will be displayed in your blog page
+blog_description: #a simple whitespace theme for academics
+permalink: # /blog/:year/:title/
 lsi: false # produce an index for related posts
 
 # Pagination
@@ -272,8 +272,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name:
-  first_name:
+  last_name: Fei
+  first_name: Sun
 
   style: apa
   locale: en
