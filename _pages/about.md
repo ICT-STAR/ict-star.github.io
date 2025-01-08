@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: <a href="http://english.ict.cas.cn/">@Institute of Computing Technology, Chinese Academy of Sciences</a>
+subtitle: <a href="http://english.ict.cas.cn/">@ ICT, CAS</a>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
