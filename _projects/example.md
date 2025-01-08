@@ -1,17 +1,17 @@
 ---
 layout: project
-title: "The Collapse of Model Editing"
+title: "Model Editing"
 author:
   - Wanli Yang
   - Fei Sun
-description: The Collapse of Model Editing.
-img: feature.png
+description: Model Editing.
+img: # feature.png
 time: 2024-01-02 15:59:00-0400
 ---
 
-# H1
+# Model Editing.
 
-## H2
+<!-- ## H2
 
 ### H3
 
@@ -128,4 +128,4 @@ this is an example text[^1] with a footnote.
 
 ---
 
-[^1]: this is the footnote content.
+[^1]: this is the footnote content. -->
