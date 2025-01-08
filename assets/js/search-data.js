@@ -88,17 +88,17 @@ ninja.data = [{
           title: 'Jiajun',
           description: "",
           section: "People",handler: () => {
-              window.location.href = "/people/jiajun/";
+              window.location.href = "/people/jiajun.html";
             },},{id: "people-sunfei",
           title: 'Sunfei',
           description: "",
           section: "People",handler: () => {
-              window.location.href = "/people/sunfei/";
+              window.location.href = "/people/sunfei.html";
             },},{id: "people-xunliu",
           title: 'Xunliu',
           description: "",
           section: "People",handler: () => {
-              window.location.href = "/people/xunliu/";
+              window.location.href = "/people/xunliu.html";
             },},{id: "projects-the-collapse-of-model-editing",
           title: 'The Collapse of Model Editing',
           description: "The Collapse of Model Editing.",
