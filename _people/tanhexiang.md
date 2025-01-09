@@ -1,6 +1,6 @@
 ---
 name: Hexiang Tan
-photo: tanhexiang.jpeg
+photo: tanhexiang2.jpeg
 info: PhD Students
 research_interests:
   - Uncertainty Estimation for LLMs
