@@ -1,7 +1,7 @@
 ---
 name: Jiajun Tan
 photo: jiajun.jpg
-info: PhD Students
+info: PhD Student, w/ Huawei Shen
 research_interests:
   - Machine Unlearning
   - Knowledge Manuplating in LLMs

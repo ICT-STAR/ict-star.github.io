@@ -1,7 +1,7 @@
 ---
 name: Hexiang Tan
 photo: tanhexiang2.jpeg
-info: PhD Students
+info: PhD Student, w/ Yuanzhuo Wang
 research_interests:
   - Uncertainty Estimation for LLMs
   - Hallucination Detection

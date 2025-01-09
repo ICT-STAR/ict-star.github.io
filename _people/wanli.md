@@ -1,7 +1,7 @@
 ---
 name: Wanli Yang
 photo: wanli.jpg
-info: PhD Students
+info: PhD Student, w/ Xinran Liu
 research_interests:
   - Knowledge Editing
   - Knowledge Memory and Update of LLMs

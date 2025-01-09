@@ -1,7 +1,7 @@
 ---
 name: Haowen Li
 photo: haowenli.jpg
-info: PhD Students
+info: PhD Student, w/ Xueqi Cheng
 research_interests:
   - Recommender Systems
   - Data Minimization
