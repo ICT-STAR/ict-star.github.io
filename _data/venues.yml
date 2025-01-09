@@ -40,6 +40,14 @@
   url: https://sigir.org
   color: "#F25D27"
 
+"KDD":
+  url: https://www.kdd.org/
+  color: "#F25D27"
+
+"WSDM":
+  url: https://www.wsdm-conference.org/
+  color: "#F25D27"
+
 "TOIS":
   url: https://dl.acm.org/journal/tois
   color: "#4E52A6"
@@ -47,4 +55,3 @@
 "CSUR":
   url: https://dl.acm.org/journal/csur
   color: "#4E52A6"
-

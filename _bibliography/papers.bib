@@ -206,7 +206,6 @@ year={2024},
 url={https://openreview.net/forum?id=k8AYft5ED1}
 }
 
-
 @article{Chen-2023-privacy,
 abbr = {TOIS},
 google_scholar_id={7Hz3ACDFbsoC},
@@ -361,6 +360,86 @@ location = {Virtual Event, Canada},
 series = {SIGIR '21}
 }
 
+@inproceedings{ge-2021-fairness
+abbr = {WSDM},
+google_scholar_id={t6usbXjVLHcC},
+arxiv={https://arxiv.org/pdf/2101.03584},
+author = {Ge, Yingqiang and Liu, Shuchang and Gao, Ruoyuan and Xian, Yikun and Li, Yunqi and Zhao, Xiangyu and Pei, Changhua and Sun, Fei and Ge, Junfeng and Ou, Wenwu and Zhang, Yongfeng},
+title = {Towards Long-term Fairness in Recommendation},
+year = {2021},
+isbn = {9781450382977},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3437963.3441824},
+doi = {10.1145/3437963.3441824},
+abstract = {As Recommender Systems (RS) influence more and more people in their daily life, the issue of fairness in recommendation is becoming more and more important. Most of the prior approaches to fairness-aware recommendation have been situated in a static or one-shot setting, where the protected groups of items are fixed, and the model provides a one-time fairness solution based on fairness-constrained optimization. This fails to consider the dynamic nature of the recommender systems, where attributes such as item popularity may change over time due to the recommendation policy and user engagement. For example, products that were once popular may become no longer popular, and vice versa. As a result, the system that aims to maintain long-term fairness on the item exposure in different popularity groups must accommodate this change in a timely fashion.Novel to this work, we explore the problem of long-term fairness in recommendation and accomplish the problem through dynamic fairness learning. We focus on the fairness of exposure of items in different groups, while the division of the groups is based on item popularity, which dynamically changes over time in the recommendation process. We tackle this problem by proposing a fairness-constrained reinforcement learning algorithm for recommendation, which models the recommendation problem as a Constrained Markov Decision Process (CMDP), so that the model can dynamically adjust its recommendation policy to make sure the fairness requirement is always satisfied when the environment changes. Experiments on several real-world datasets verify our framework's superiority in terms of recommendation performance, short-term fairness, and long-term fairness.},
+booktitle = {Proceedings of the 14th ACM International Conference on Web Search and Data Mining},
+pages = {445–453},
+numpages = {9},
+keywords = {unbiased recommendation, reinforcement learning, recommender system, long-term fairness, constrained policy optimization},
+location = {Virtual Event, Israel},
+series = {WSDM '21}
+}
+
+@inproceedings{liu-2020-Intent,
+  abbr = {IJCAI},
+  google_scholar_id={08ZZubdj9fEC},
+  pdf={https://www.ijcai.org/Proceedings/2020/0357.pdf},
+  title     = {Intent Preference Decoupling for User Representation on Online Recommender System},
+  author    = {Liu, Zhaoyang and Chen, Haokun and Sun, Fei and Xie, Xu and Gao, Jinyang and Ding, Bolin and Shen, Yanyan},
+  booktitle = {Proceedings of the Twenty-Ninth International Joint Conference on
+               Artificial Intelligence, {IJCAI-20}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Christian Bessiere},
+  pages     = {2575--2582},
+  year      = {2020},
+  month     = {7},
+  note      = {Main track},
+  doi       = {10.24963/ijcai.2020/357},
+  url       = {https://doi.org/10.24963/ijcai.2020/357},
+}
+
+@inproceedings{Chen-2020-Distillation,
+abbr = {KDD},
+google_scholar_id={vRqMK49ujn8C},
+arxiv={https://arxiv.org/pdf/1907.05171},
+author = {Xu, Chen and Li, Quan and Ge, Junfeng and Gao, Jinyang and Yang, Xiaoyong and Pei, Changhua and Sun, Fei and Wu, Jian and Sun, Hanxiao and Ou, Wenwu},
+title = {Privileged Features Distillation at Taobao Recommendations},
+year = {2020},
+isbn = {9781450379984},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3394486.3403309},
+doi = {10.1145/3394486.3403309},
+abstract = {Features play an important role in the prediction tasks of e-commerce recommendations. To guarantee the consistency of off-line training and on-line serving, we usually utilize the same features that are both available. However, the consistency in turn neglects some discriminative features. For example, when estimating the conversion rate (CVR), i.e., the probability that a user would purchase the item if she clicked it, features like dwell time on the item detailed page are informative. However, CVR prediction should be conducted for on-line ranking before the click happens. Thus we cannot get such post-event features during serving.We define the features that are discriminative but only available during training as the privileged features. Inspired by the distillation techniques which bridge the gap between training and inference, in this work, we propose privileged features distillation (PFD). We train two models, i.e., a student model that is the same as the original one and a teacher model that additionally utilizes the privileged features. Knowledge distilled from the more accurate teacher is transferred to the student, which helps to improve its prediction accuracy. During serving, only the student part is extracted and it relies on no privileged features. We conduct experiments on two fundamental prediction tasks at Taobao recommendations, i.e., click-through rate (CTR) at coarse-grained ranking and CVR at fine-grained ranking. By distilling the interacted features that are prohibited during serving for CTR and the post-event features for CVR, we achieve significant improvements over their strong baselines. During the on-line A/B tests, the click metric is improved by +5.0\% in the CTR task. And the conversion metric is improved by +2.3\% in the CVR task. Besides, by addressing several issues of training PFD, we obtain comparable training speed as the baselines without any distillation.},
+booktitle = {Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+pages = {2590–2598},
+numpages = {9},
+keywords = {ctr, cvr, distillation, e-commerce recommendations, privileged features},
+location = {Virtual Event, CA, USA},
+series = {KDD '20}
+}
+
+@inproceedings{ge-2020-echo,
+abbr = {SIGIR},
+google_scholar_id={738O_yMBCRsC},
+arxiv={https://arxiv.org/pdf/2007.02474},
+author = {Ge, Yingqiang and Zhao, Shuya and Zhou, Honglu and Pei, Changhua and Sun, Fei and Ou, Wenwu and Zhang, Yongfeng},
+title = {Understanding Echo Chambers in E-commerce Recommender Systems},
+year = {2020},
+isbn = {9781450380164},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3397271.3401431},
+doi = {10.1145/3397271.3401431},
+abstract = {Personalized recommendation benefits users in accessing contents of interests effectively. Current research on recommender systems mostly focuses on matching users with proper items based on user interests. However, significant efforts are missing to understand how the recommendations influence user preferences and behaviors, e.g., if and how recommendations result in echo chambers. Extensive efforts have been made in examining the phenomenon in online media and social network systems. Meanwhile, there are growing concerns that recommender systems might lead to the self-reinforcing of user's interests due to narrowed exposure of items, which may be the potential cause of echo chamber. In this paper, we aim to analyze the echo chamber phenomenon in Alibaba Taobao --- one of the largest e-commerce platforms in the world.Echo chamber means the effect of user interests being reinforced through repeated exposure to similar contents. Based on the definition, we examine the presence of echo chamber in two steps. First, we explore whether user interests have been reinforced. Second, we check whether the reinforcement results from the exposure of similar contents. Our evaluations are enhanced with robust metrics, including cluster validity and statistical significance. Experiments are performed on extensive collections of real-world data consisting of user clicks, purchases, and browse logs from Alibaba Taobao. Evidence suggests the tendency of echo chamber in user click behaviors, while it is relatively mitigated in user purchase behaviors. Insights from the results guide the refinement of recommendation algorithms in real-world e-commerce systems.},
+booktitle = {Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval},
+pages = {2261–2270},
+numpages = {10},
+keywords = {e-commerce, echo chamber, filter bubble, recommender systems},
+location = {Virtual Event, China},
+series = {SIGIR '20}
+}
 
 @article{Zhang-2020-graph,
 abbr = {TOIS},
