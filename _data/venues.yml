@@ -48,6 +48,10 @@
   url: https://www.wsdm-conference.org/
   color: "#F25D27"
 
+"IJCAI":
+  url: https://www.ijcai.org/
+  color: "#F25D27"
+
 "TOIS":
   url: https://dl.acm.org/journal/tois
   color: "#4E52A6"
