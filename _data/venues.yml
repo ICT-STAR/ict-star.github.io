@@ -1,45 +1,50 @@
 "ACL":
   url: https://aclanthology.org/venues/acl
-  color: "#D9583B"
+  color: "#F25D27"
 
 "ACL (Findings)":
   url: https://aclanthology.org/venues/acl
-  color: "#D9583B"
+  color: "#F25D27"
 
 "EMNLP":
   url: https://aclanthology.org/venues/emnlp
-  color: "#4E52A6"
+  color: "#F25D27"
 
 "EMNLP (Findings)":
   url: https://aclanthology.org/venues/emnlp
-  color: "#4E52A6"
+  color: "#F25D27"
 
 "WebConf":
-  color: "#3F7373"
+  color: "#F25D27"
 
 "WebConf (Short)":
-  color: "#3F7373"
+  color: "#F25D27"
 
 "NeurIPS":
   url: https://neurips.cc
-  color: "#009f36"
-
-"TOIS":
-  url: https://dl.acm.org/journal/tois
   color: "#F25D27"
-
-"CSUR":
-  url: https://dl.acm.org/journal/csur
-  color: "#45C4B0"
 
 "CIKM":
   url: http://www.cikmconference.org
-  color: "#F2BE22"
+  color: "#F25D27"
 
 "RecSys":
   url: https://recsys.acm.org
-  color: "#593A27"
+  color: "#F25D27"
+
+"ICDE":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000178/all-proceedings
+  color: "#F25D27"
 
 "SIGIR":
   url: https://sigir.org
-  color: "#593A27"
+  color: "#F25D27"
+
+"TOIS":
+  url: https://dl.acm.org/journal/tois
+  color: "#4E52A6"
+
+"CSUR":
+  url: https://dl.acm.org/journal/csur
+  color: "#4E52A6"
+
