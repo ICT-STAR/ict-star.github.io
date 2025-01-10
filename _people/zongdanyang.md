@@ -1,3 +1,12 @@
-| name | photo | info | research_interests | category | email | github |
-|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| Danyang Zong | zdy.png | Visiting Master | | Recommendation Systems | Membership Inference Attack | | Master Students | zongdanyang01@gmail.com | https://github.com/zongAugust ｜
+---
+name: Danyang Zong
+photo: zdy.png
+info: Visiting Master Student
+research_interests:
+  - Recommender Systems
+  - Membership Inference Attack
+category: Master Students
+
+email: zongdanyang01@gmail.com
+github: https://github.com/zongAugust
+---
