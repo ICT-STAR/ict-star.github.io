@@ -1,1 +1,1 @@
-Sitemap: https://star-sf.github.io/sitemap.xml
+Sitemap: https://ict-star.github.io/sitemap.xml
