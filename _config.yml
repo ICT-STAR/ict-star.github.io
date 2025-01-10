@@ -6,13 +6,13 @@ title: STAR GROUP # the website title (if blank, full name will be used instead)
 name: STAR
 type: Group
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Feel free to reach out via email for the quickest response.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  STAR Group, part of the CAS Key Laboratory of AI Safety, Institute of Computing Technology (ICT), Chinese Academy of Sciences (CAS), focuses on advancing research in AI safety and trustworthiness.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with modified <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: AI Safety, Fei Sun, LLM, Recommendation, Recommender System # add your own keywords or leave empty
+keywords: AI Safety, Trustworthy, Fei Sun, LLM, Recommendation, Recommender System # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon_enabled: false
 icon: logo.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
