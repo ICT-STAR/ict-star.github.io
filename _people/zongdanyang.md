@@ -5,7 +5,7 @@ info: Visiting Master Student
 research_interests:
   - Recommender Systems
   - Membership Inference Attack
-category: Master Students
+category: Master
 
 email: zongdanyang01@gmail.com
 github: https://github.com/zongAugust
