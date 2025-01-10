@@ -17,5 +17,5 @@ At STAR Group, we believe interpretability is a key to building safe and trustwo
 
 <div style="border: 2px solid #f44336; background-color: #ffebee; padding: 16px; border-radius: 5px; margin: 20px 0;">
     <h4 style="color: #f44336; margin-top: 0;">Open Positions</h4>
-    <p style="color: #333;">We are looking for self-motivated interns/postdoc to do research with us. Feel free to contact us if you are interested. For more information, please visit the <a href="./join_us/">Join us</a> page.</p>
+    <p style="color: #333;">We are looking for self-motivated interns/postdoc to do research with us. Feel free to contact us if you are interested. For more information, please visit the <a href="https://ict-star.github.io/join_us/">Join us</a> page.</p>
 </div>
