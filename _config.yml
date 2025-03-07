@@ -147,6 +147,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
+  seminars:
+    output: false
+    permalink: /:collection/:title/
 
 announcements:
   enabled: true
