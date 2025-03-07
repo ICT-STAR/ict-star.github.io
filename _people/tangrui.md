@@ -7,7 +7,7 @@ research_interests:
   - Knowledge Memory and Update of LLMs
 category: undergraduate
 
-# homepage: https://example.com
+homepage: https://rickt34.github.io/
 email: rick.tanng@gmail.com
 # google_scholar: https://scholar.google.com/citations?user=example
 github: https://github.com/RickT34
