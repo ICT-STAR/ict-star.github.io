@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-seminars",
+          title: "seminars",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/seminars/";
+          },
         },{id: "nav-publications",
           title: "publications",
           description: "",
@@ -123,6 +130,11 @@ ninja.data = [{
           description: "Model Editing.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/example/";
+            },},{id: "seminars-example",
+          title: 'example',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/example/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
