@@ -135,6 +135,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/example/";
+            },},{id: "seminars-reasoning-errors-of-llms",
+          title: 'Reasoning Errors of LLMs',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/reasoning_error_of_LLMs_Wanli/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
