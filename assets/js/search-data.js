@@ -140,6 +140,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/reasoning_error_of_LLMs_Wanli/";
+            },},{id: "seminars-rethinking-llm-unlearning-benchmarks-and-datasets",
+          title: 'Rethinking LLM Unlearning: Benchmarks and Datasets',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/rethinking_LLM_unlearning_qrc/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
