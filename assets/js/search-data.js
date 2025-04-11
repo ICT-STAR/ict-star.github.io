@@ -145,6 +145,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/rethinking_LLM_unlearning_qrc/";
+            },},{id: "seminars-towards-robust-safety-alignment-of-llms",
+          title: 'Towards Robust Safety Alignment of LLMs',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/robust_alignment_LLMs/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
