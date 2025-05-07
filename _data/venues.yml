@@ -15,11 +15,11 @@
   color: "#F25D27"
 
 "NAACL":
-  url: https://aclanthology.org/venues/acl
+  url: https://aclanthology.org/venues/naacl
   color: "#F25D27"
   
 "NAACL (Findings)":
-  url: https://aclanthology.org/venues/acl
+  url: https://aclanthology.org/venues/naacl
   color: "#F25D27"
 
 "WebConf":
