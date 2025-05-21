@@ -150,6 +150,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/robust_alignment_LLMs/";
+            },},{id: "seminars-rethinking-self-consistency-for-hallucination-detection-in-llms",
+          title: 'Rethinking Self-Consistency for Hallucination Detection in LLMs',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/self-consistency_ls/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
