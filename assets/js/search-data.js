@@ -155,6 +155,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/self-consistency_ls/";
+            },},{id: "seminars-ai-scheming-frontier-models-may-pursue-secret-goals-and-lie-to-you",
+          title: 'AI Scheming: Frontier Models may Pursue Secret Goals and Lie to You',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/ai_scheming_xun/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
