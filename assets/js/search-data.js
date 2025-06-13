@@ -163,6 +163,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/ai_scheming_xun/";
+            },},{id: "seminars-relearn-unlearning-via-learning-for-large-language-models",
+          title: 'ReLearn: Unlearning via Learning for Large Language Models',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/ReLearn_paperReading_honglin/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
