@@ -168,6 +168,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/ReLearn_paperReading_honglin/";
+            },},{id: "seminars-llms-in-recommender-system",
+          title: 'LLMs in Recommender System',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/LLMs_in_Recsys_Wenwei/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
