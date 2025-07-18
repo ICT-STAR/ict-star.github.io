@@ -133,11 +133,6 @@ ninja.data = [{
           description: "Model Editing.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/example/";
-            },},{id: "seminars-example",
-          title: 'example',
-          description: "",
-          section: "Seminars",handler: () => {
-              window.location.href = "/seminars/example/";
             },},{id: "seminars-reasoning-errors-of-llms",
           title: 'Reasoning Errors of LLMs',
           description: "",
