@@ -173,6 +173,11 @@ ninja.data = [{
           description: "",
           section: "Seminars",handler: () => {
               window.location.href = "/seminars/LLMs_in_Recsys_Wenwei/";
+            },},{id: "seminars-layer-wise-fine-tuning-in-llms",
+          title: 'Layer-wise Fine-tuning in LLMs',
+          description: "",
+          section: "Seminars",handler: () => {
+              window.location.href = "/seminars/Layer-wise_FT_in_LLMs_Wanli/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
