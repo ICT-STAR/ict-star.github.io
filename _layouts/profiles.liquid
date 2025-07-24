@@ -96,79 +96,54 @@ layout: default
       <h2 class="text-center">Alumni</h2>
     </div>
 
-    <div class="col-md-12">
-      <div class="row justify-content-center">
-        {% for category in site.data.alumni %}
-          {% assign cat_key = category[0] %}
-          {% assign members = category[1] %}
-          {% if members.size > 0 %}
-            {% if total_categories > 1 %}
-              <div class="col-lg-3 col-md-4 col-sm-12 justify-content-center">
-                <h3 class="mt-4">{{ cat_key }}</h3>
-                {% for member in members %}
-                  <div class="mb-3">
-                    {% if member.url %}
-                      <a href="{{ member.url }}">
-                        <strong>{{ member.name }}</strong>
-                      </a>
-                    {% else %}
-                      <strong>{{ member.name }}</strong>
-                    {% endif %}
-                    {% if member.note %}
-                      <br>
-                      <span class="text-muted">{{ member.note }}</span>
-                    {% endif %}
-                  </div>
-                {% endfor %}
-              </div>
-            {% else %}
-              <div class="col-md-12 justify-content-center">
-                <h3 class="mt-4 text-center">{{ cat_key }}</h3>
-                {% assign half_member = members.size | divided_by: 2 %}
-                {% if half_member != members.size - half_member %}
-                  {% assign half_member = half_member | plus: 1 %}
-                {% endif %}
-                <div class="row justify-content-center">
-                  <div class="col-md-4">
-                    {% for member in members limit: half_member %}
-                      <div class="mb-3">
-                        {% if member.url %}
-                          <a href="{{ member.url }}">
-                            <strong>{{ member.name }}</strong>
-                          </a>
-                        {% else %}
-                          <strong>{{ member.name }}</strong>
-                        {% endif %}
-                        {% if member.note %}
-                          <br>
-                          <span class="text-muted">{{ member.note }}</span>
-                        {% endif %}
-                      </div>
-                    {% endfor %}
-                  </div>
-                  <div class="col-md-4">
-                    {% for member in members offset: half_member %}
-                      <div class="mb-3">
-                        {% if member.url %}
-                          <a href="{{ member.url }}">
-                            <strong>{{ member.name }}</strong>
-                          </a>
-                        {% else %}
-                          <strong>{{ member.name }}</strong>
-                        {% endif %}
-                        {% if member.note %}
-                          <br>
-                          <span class="text-muted">{{ member.note }}</span>
-                        {% endif %}
-                      </div>
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-            {% endif %}
+    {% for category in site.data.alumni %}
+      {% assign cat_key = category[0] %}
+      {% assign members = category[1] %}
+      {% if members.size > 0 %}
+        <div class="col-md-12">
+          <h3 class="mt-4 text-center">{{ cat_key }}</h3>
+          {% assign half_member = members.size | divided_by: 2 %}
+          {% if half_member != members.size - half_member %}
+            {% assign half_member = half_member | plus: 1 %}
           {% endif %}
-        {% endfor %}
-      </div>
-    </div>
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              {% for member in members limit: half_member %}
+                <div class="mb-3">
+                  {% if member.url %}
+                    <a href="{{ member.url }}">
+                      <strong>{{ member.name }}</strong>
+                    </a>
+                  {% else %}
+                    <strong>{{ member.name }}</strong>
+                  {% endif %}
+                  {% if member.note %}
+                    <br>
+                    <span class="text-muted">{{ member.note }}</span>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="col-md-4">
+              {% for member in members offset: half_member %}
+                <div class="mb-3">
+                  {% if member.url %}
+                    <a href="{{ member.url }}">
+                      <strong>{{ member.name }}</strong>
+                    </a>
+                  {% else %}
+                    <strong>{{ member.name }}</strong>
+                  {% endif %}
+                  {% if member.note %}
+                    <br>
+                    <span class="text-muted">{{ member.note }}</span>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
   {% endif %}
 </div>
