@@ -48,5 +48,31 @@ jobs:
         uses: lycheeverse/lychee-action@v2.1.0
         with:
           fail: true
-          # removed md files that include liquid tags
-          args: --user-agent 'curl/7.54' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --verbose --no-progress './**/*.md' './**/*.html'
+          # removed md files that include liquid tags and exclude domains that block automated requests
+          args: >-
+            --user-agent 'curl/7.54'
+            --exclude-path README.md
+            --exclude-path _pages/404.md
+            --exclude-path _pages/blog.md
+            --exclude-path _posts/2018-12-22-distill.md
+            --exclude-path _posts/2023-04-24-videos.md
+            --exclude 'https://scholar.google.com/.*'
+            --exclude 'https://scholar.google.cn/.*'
+            --exclude 'https://dl.acm.org/.*'
+            --exclude 'https://ieeexplore.ieee.org/.*'
+            --exclude 'https://arxiv.org/.*'
+            --exclude 'https://www.researchgate.net/.*'
+            --exclude 'https://dblp.org/.*'
+            --exclude 'https://dblp.uni-trier.de/.*'
+            --exclude 'https://link.springer.com/.*'
+            --exclude 'https://www.nature.com/.*'
+            --exclude 'https://www.sciencedirect.com/.*'
+            --exclude 'https://onlinelibrary.wiley.com/.*'
+            --exclude 'https://www.jstor.org/.*'
+            --exclude 'https://pubmed.ncbi.nlm.nih.gov/.*'
+            --exclude 'https://example.com/.*'
+            --exclude 'http://example.com/.*'
+            --verbose
+            --no-progress
+            './**/*.md'
+            './**/*.html'
