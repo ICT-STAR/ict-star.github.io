@@ -120,7 +120,6 @@
     $$
     ```
 - 图片：
-
   - 格式1：`![alt](url)`，如`![example](assets/img/example.png)`，
   - 格式2：`{% include figure.liquid path="example.png" alt="example" %}`，如`{% include figure.liquid path="example.png" alt="example" %}`
   - 图注: `<div class="caption">图注</div>`

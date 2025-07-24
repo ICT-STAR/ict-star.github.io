@@ -15,4 +15,4 @@ horizontal: false
     {% for seminar in sorted_seminars %}
     {% include seminar_card.liquid %}
     {% endfor %}
-</div> 
+</div>
