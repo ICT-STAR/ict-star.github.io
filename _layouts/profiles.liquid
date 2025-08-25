@@ -2,14 +2,19 @@
 layout: default
 ---
 <div class="container">
+  <div class="col-md-12 text-center justify-content-center">
+  <h1 style="font-weight: 700;">STAR Group</h1>
+  <a href="https://ict-star.github.io/" style="margin-bottom: 2rem;"><strong>STAR Group</strong></a> is a part of the CAS Key Laboratory of AI Safety.
+  </div>
+  <br>
   <div class="row text-center justify-content-center">
     <!-- Faculty Section -->
-    {% assign categories = 'faculty,phd,master,undergraduate' | split: ',' %}
-    {% assign category_names = 'Faculty,PhD Students,Master Students,Undergraduate Students' | split: ',' %}
+    {% assign categories = 'phd,master,undergraduate' | split: ',' %}
+    {% assign category_names = 'PhD Students,Master Students,Undergraduate Students' | split: ',' %}
     {% for category in categories %}
       {% assign index = forloop.index0 %}
       <div class="col-md-12">
-        <h2>{{ category_names[index] }}</h2>
+        <h2 style="font-weight: 700;">{{ category_names[index] }}</h2>
         <div class="row justify-content-center">
           {% for person in site.people %}
             {% if person.category == category %}
@@ -93,57 +98,69 @@ layout: default
   </script>
   {% if total_categories > 0 %}
     <div class="col-md-12">
-      <h2 class="text-center">Alumni</h2>
+      <h2 class="text-center" style="font-weight: 700;">Alumni</h2>
     </div>
 
-    {% for category in site.data.alumni %}
-      {% assign cat_key = category[0] %}
-      {% assign members = category[1] %}
-      {% if members.size > 0 %}
-        <div class="col-md-12">
-          <h3 class="mt-4 text-center">{{ cat_key }}</h3>
-          {% assign half_member = members.size | divided_by: 2 %}
-          {% if half_member != members.size - half_member %}
-            {% assign half_member = half_member | plus: 1 %}
+    <div class="col-md-12">
+      <div class="row justify-content-center">
+        {% for category in site.data.alumni %}
+          {% assign cat_key = category[0] %}
+          {% assign members = category[1] %}
+          {% if members.size > 0 %}
+            
+              <div class="col-md-12 justify-content-center">
+                <h3 class="mt-4 text-center">{{ cat_key }}</h3>
+                {% assign member_count = members | size %}
+                {% assign half_size = member_count | divided_by: 2.0 | ceil %}
+                <div class="row justify-content-center">
+                  <div class="col-md-5">
+                    {% for member in members limit: half_size %}
+                      <div class="mb-3">
+                        {% if member.url %}
+                          <a href="{{ member.url }}">
+                            <strong>{{ member.name }}</strong>
+                          </a>
+                        {% else %}
+                          <strong>{{ member.name }}</strong>
+                        {% endif %}
+                        {% if member.note %}
+                          <br>
+                          <span class="text-muted">{{ member.note }}</span>
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <div class="col-md-5">
+                    {% for member in members offset: half_size %}
+                      <div class="mb-3">
+                        {% if member.url %}
+                          <a href="{{ member.url }}">
+                            <strong>{{ member.name }}</strong>
+                          </a>
+                        {% else %}
+                          <strong>{{ member.name }}</strong>
+                        {% endif %}
+                        {% if member.note %}
+                          <br>
+                          <span class="text-muted">{{ member.note }}</span>
+                        {% endif %}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
           {% endif %}
-          <div class="row justify-content-center">
-            <div class="col-md-4">
-              {% for member in members limit: half_member %}
-                <div class="mb-3">
-                  {% if member.url %}
-                    <a href="{{ member.url }}">
-                      <strong>{{ member.name }}</strong>
-                    </a>
-                  {% else %}
-                    <strong>{{ member.name }}</strong>
-                  {% endif %}
-                  {% if member.note %}
-                    <br>
-                    <span class="text-muted">{{ member.note }}</span>
-                  {% endif %}
-                </div>
-              {% endfor %}
-            </div>
-            <div class="col-md-4">
-              {% for member in members offset: half_member %}
-                <div class="mb-3">
-                  {% if member.url %}
-                    <a href="{{ member.url }}">
-                      <strong>{{ member.name }}</strong>
-                    </a>
-                  {% else %}
-                    <strong>{{ member.name }}</strong>
-                  {% endif %}
-                  {% if member.note %}
-                    <br>
-                    <span class="text-muted">{{ member.note }}</span>
-                  {% endif %}
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
   {% endif %}
+
+  <div class="col-md-12">
+    <h2 class="text-center" style="font-weight: 700;">Acknowledgements</h2>
+    <p> 
+We would like to thank the following sponsors and funding agencies for supporting our research: National Key R&D Program, Strategic Priority Research Program of CAS, Beijing Natural Science Foundation, ICT, and Meituan.</p>
+  </div>
+
+
+
 </div>
