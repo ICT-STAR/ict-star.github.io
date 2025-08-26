@@ -14,6 +14,10 @@
   url: https://aclanthology.org/venues/emnlp
   color: "#F25D27"
 
+"EMNLP (Short)":
+  url: https://aclanthology.org/venues/emnlp
+  color: "#F25D27"
+
 "NAACL":
   url: https://aclanthology.org/venues/naacl
   color: "#F25D27"
@@ -32,6 +36,10 @@
   url: https://neurips.cc
   color: "#F25D27"
 
+"ICML":
+  url: https://icml.cc/
+  color: "#F25D27"
+
 "CIKM":
   url: http://www.cikmconference.org
   color: "#F25D27"
@@ -42,6 +50,10 @@
 
 "ICDE":
   url: https://ieeexplore.ieee.org/xpl/conhome/1000178/all-proceedings
+  color: "#F25D27"
+
+"SIGIR (Short)":
+  url: https://sigir.org
   color: "#F25D27"
 
 "SIGIR":
@@ -66,4 +78,7 @@
 
 "CSUR":
   url: https://dl.acm.org/journal/csur
+  color: "#4E52A6"
+
+"Information Sciences":
   color: "#4E52A6"
