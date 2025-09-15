@@ -5,7 +5,7 @@ info: Master Student,w/ Fei Sun, Qi Cao
 research_interests:
   - Recommender Systems
   - Large language Models
-category: Master
+category: master
 
 homepage: https://banwwup.github.io/
 email: banwenwei02@gmail.com
