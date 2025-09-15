@@ -79,7 +79,12 @@ ninja.data = [{
           section: "News",},{id: "news-three-papers-are-accepted-by-emnlp-2025-about-hallucination-uncertainty-estimation-backdoor-and-jailbreaking",
           title: 'Three papers are accepted by EMNLP 2025 about Hallucination/Uncertainty Estimation, Backdoor, and Jailbreaking....',
           description: "",
-          section: "News",},{id: "people-chenzhenxing",
+          section: "News",},{id: "people-banwenwei",
+          title: 'Banwenwei',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/banwenwei.html";
+            },},{id: "people-chenzhenxing",
           title: 'Chenzhenxing',
           description: "",
           section: "People",handler: () => {
