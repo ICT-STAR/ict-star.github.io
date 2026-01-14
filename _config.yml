@@ -8,7 +8,7 @@ type: Group
 contact_note: >
   Feel free to reach out via email for the quickest response.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  STAR Group, part of the CAS Key Laboratory of AI Safety, Institute of Computing Technology (ICT), Chinese Academy of Sciences (CAS), focuses on advancing research in AI safety and trustworthiness.
+  STAR Group, part of the State Key Laboratory of AI Safety, Institute of Computing Technology (ICT), Chinese Academy of Sciences (CAS), focuses on advancing research in AI safety and trustworthiness.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with modified <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
