@@ -88,7 +88,12 @@ ninja.data = [{
           section: "News",},{id: "news-two-papers-are-accepted-by-webconf-2026-about-recsys-and-membership-inference-attack-congrats-to-danyang-and-hanqi",
           title: 'Two papers are accepted by WebConf 2026 about RecSys and Membership Inference Attack....',
           description: "",
-          section: "News",},{id: "people-banwenwei",
+          section: "News",},{id: "people-0zhangshixuan",
+          title: '0zhangshixuan',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/0zhangshixuan.html";
+            },},{id: "people-banwenwei",
           title: 'Banwenwei',
           description: "",
           section: "People",handler: () => {
@@ -108,16 +113,6 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/jiajun.html";
-            },},{id: "people-pujiayue",
-          title: 'Pujiayue',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/pujiayue.html";
-            },},{id: "people-shaliu",
-          title: 'Shaliu',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/shaliu.html";
             },},{id: "people-sunfei",
           title: 'Sunfei',
           description: "",
