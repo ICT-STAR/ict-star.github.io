@@ -1,7 +1,7 @@
 ---
 name: Yongzhou Yao
 photo: yaoyongzhou.png
-info: Undergraduate
+info: Master Student(2026-), w/ Fei Sun
 research_interests:
   - Agent Safety
   - Self-evolving Agents
