@@ -1,7 +1,7 @@
 ---
 name: Rui Tang
 photo: tangrui.jpg
-info: Undergraduate
+info: Master Student, w/ Fei Sun
 research_interests:
   - Knowledge Editing
   - Knowledge Memory and Update of LLMs
