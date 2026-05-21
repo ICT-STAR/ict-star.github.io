@@ -139,6 +139,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/wanli.html";
+            },},{id: "people-yaoyongzhou",
+          title: 'Yaoyongzhou',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/yaoyongzhou.html";
             },},{id: "people-zongdanyang",
           title: 'Zongdanyang',
           description: "",
