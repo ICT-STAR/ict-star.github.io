@@ -1,6 +1,6 @@
 ---
 name: Yongzhou Yao
-photo: yaoyongzhou.jpg
+photo: yaoyongzhou.png
 info: Undergraduate
 research_interests:
   - Agent Safety
