@@ -5,7 +5,7 @@ info: Undergraduate
 research_interests:
   - Knowledge Editing
   - Knowledge Memory and Update of LLMs
-category: undergraduate
+category: master
 
 homepage: https://rickt34.github.io/
 email: rick.tanng@gmail.com
