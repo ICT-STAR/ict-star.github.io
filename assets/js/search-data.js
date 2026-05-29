@@ -144,11 +144,6 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/yaoyongzhou.html";
-            },},{id: "people-zongdanyang",
-          title: 'Zongdanyang',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/zongdanyang.html";
             },},{id: "projects-model-editing",
           title: 'Model Editing',
           description: "Model Editing.",
