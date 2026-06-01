@@ -104,6 +104,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/banwenwei.html";
+            },},{id: "people-chenweilun",
+          title: 'Chenweilun',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/chenweilun.html";
             },},{id: "people-haowenli",
           title: 'Haowenli',
           description: "",
