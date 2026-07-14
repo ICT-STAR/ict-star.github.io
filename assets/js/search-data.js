@@ -99,11 +99,6 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/0zhangshixuan.html";
-            },},{id: "people-banwenwei",
-          title: 'Banwenwei',
-          description: "",
-          section: "People",handler: () => {
-              window.location.href = "/people/banwenwei.html";
             },},{id: "people-chenweilun",
           title: 'Chenweilun',
           description: "",
