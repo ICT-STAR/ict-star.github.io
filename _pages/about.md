@@ -13,7 +13,6 @@ social: true # includes social icons at the bottom of the page
 
 At STAR Group, we believe interpretability is a key to building safe and trustworthy AI. Our research focuses on the knowledge mechanisms of AI models---how they learn, memorize, recall, update/edit, and forget knowledge. We also explore the security and privacy impacts of deploying AI in real-world applications, with a special focus on LLMs and recommender systems.
 
-<br>
 
 <div style="border: 2px solid #f44336; background-color: #ffebee; padding: 16px; border-radius: 5px; margin: 20px 0;">
     <h4 style="color: #f44336; margin-top: 0;">Open Positions</h4>
