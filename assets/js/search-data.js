@@ -144,6 +144,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/yaoyongzhou.html";
+            },},{id: "people-youduliu",
+          title: 'Youduliu',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/youduliu.html";
             },},{id: "projects-model-editing",
           title: 'Model Editing',
           description: "Model Editing.",
