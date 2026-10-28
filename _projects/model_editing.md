@@ -45,15 +45,12 @@ time: 2026-10-28
       <p class="me-paper-title">The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse</p>
       <div class="me-links"><a href="https://aclanthology.org/2024.findings-acl.322/">Paper ↗</a><a href="https://github.com/WanliYoung/Collapse-in-Model-Editing">Code &amp; HardEdit ↗</a></div>
     </div>
-    <figure class="me-figure">
-      <div class="me-figure-heading"><h3>One edit. Three capabilities.</h3><span>Accuracy (%)</span></div>
-      <div class="me-legend"><span><i class="me-dot me-original"></i>Original GPT-J</span><span><i class="me-dot me-edited"></i>After one ROME edit</span></div>
-      <div class="me-bars" role="img" aria-label="Original versus edited accuracy: PIQA 75.41 versus 55.22 percent; HellaSwag 49.53 versus 26.01 percent; LAMBADA 61.36 versus 0 percent.">
-        <div class="me-bar-group"><span>PIQA</span><div class="me-bar-track"><div class="me-bar me-original" style="width:75.41%"></div><b>75.41</b></div><div class="me-bar-track"><div class="me-bar me-edited" style="width:55.22%"></div><b>55.22</b></div></div>
-        <div class="me-bar-group"><span>HellaSwag</span><div class="me-bar-track"><div class="me-bar me-original" style="width:49.53%"></div><b>49.53</b></div><div class="me-bar-track"><div class="me-bar me-edited" style="width:26.01%"></div><b>26.01</b></div></div>
-        <div class="me-bar-group"><span>LAMBADA</span><div class="me-bar-track"><div class="me-bar me-original" style="width:61.36%"></div><b>61.36</b></div><div class="me-bar-track"><div class="me-bar me-edited" style="width:0%"></div><b>0.00</b></div></div>
-      </div>
-      <figcaption>Redrawn from <a href="https://aclanthology.org/2024.findings-acl.322.pdf#page=1">Fig. 1b</a>. One illustrative GPT-J collapse case after inserting “Twitter was acquired by Elon Musk”; this is not an average over edits.</figcaption>
+    <figure class="me-figure me-paper-figure">
+      <div class="me-figure-heading"><h3>One edit can break the whole model.</h3><span>Original Fig. 1</span></div>
+      <a class="me-original-figure" href="{{ '/assets/img/project/model-editing/butterfly-fig1.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the original Butterfly Figure 1 as an enlarged PDF">
+        <img src="{{ '/assets/img/project/model-editing/butterfly-fig1.svg' | relative_url }}" width="888" height="398" alt="Original Figure 1: after the ROME edit Twitter was acquired by Elon Musk, GPT-J's coherent story becomes repetitive gibberish. PIQA, HellaSwag, and LAMBADA accuracy falls sharply toward the random baselines.">
+      </a>
+      <figcaption>Original <a href="https://aclanthology.org/2024.findings-acl.322.pdf#page=1">Fig. 1</a>, including generation and capability tests for one GPT-J collapse case. Tap the figure to enlarge.</figcaption>
     </figure>
   </section>
 
@@ -65,12 +62,36 @@ time: 2026-10-28
       <p>We trace a class of ROME failures to inconsistent use of contextualized and unprefixed key representations. For subjects at the first token, this mismatch can shrink the update’s denominator and amplify the parameter change. Using prefixed keys consistently stabilizes the update; matching the context at evaluation recovers edit efficacy. This explains a concrete single-edit failure, while cumulative editing remains a broader challenge.</p>
       <p class="me-paper-title">The Fall of ROME: Understanding the Collapse of LLMs in Model Editing</p>
       <div class="me-links"><a href="https://aclanthology.org/2024.findings-emnlp.236/">Paper ↗</a><a href="https://github.com/WanliYoung/Collapse-in-Model-Editing">Code ↗</a></div>
+      <figure class="me-rome-evidence">
+        <table class="me-rome-data"><caption>What changes in GPT-J collapse cases?</caption><thead><tr><th scope="col">Mean quantity</th><th scope="col">Normal</th><th scope="col">Collapse</th></tr></thead><tbody><tr><th scope="row">Numerator norm</th><td>88.69</td><td>140.27</td></tr><tr><th scope="row">Absolute denominator</th><td>12.78</td><td class="me-key-unprefixed">0.04</td></tr></tbody></table>
+        <figcaption><a href="https://aclanthology.org/2024.findings-emnlp.236.pdf#page=3">Table 1</a> · Normal: 1,000 sampled COUNTERFACT edits; collapse: HardCF. The mean absolute denominator is about 320× smaller. Numerator and denominator statistics are averaged separately.</figcaption>
+      </figure>
     </div>
-    <figure class="me-figure me-mechanism">
-      <div class="me-figure-heading"><h3>Context changes the update.</h3><span>Mechanism</span></div>
-      <div class="me-path me-path-risk"><span class="me-path-label">Inconsistent keys</span><div><span>Context mismatch</span><span aria-hidden="true">↓</span><span>Tiny denominator</span><span aria-hidden="true">↓</span><strong>Oversized update</strong></div></div>
-      <div class="me-path me-path-stable"><span class="me-path-label">Consistent keys</span><div><span>Prefixed keys throughout</span><span aria-hidden="true">↓</span><span>Aligned test context</span><span aria-hidden="true">↓</span><strong>Stable, effective edit</strong></div></div>
-      <figcaption>Conceptual summary of <a href="https://aclanthology.org/2024.findings-emnlp.236.pdf#page=3">§3–4</a>. The diagnosis focuses on first-token failures, primarily in GPT-2-XL and GPT-J.</figcaption>
+    <figure class="me-figure me-formula-card">
+      <div class="me-figure-heading"><h3>Where the implementation goes wrong</h3><span>§3.1</span></div>
+      <p class="me-equation-label">ROME implementation · mixed keys</p>
+      <div class="me-equation">
+        <math display="block" aria-label="ROME update: numerator is v target minus W times unprefixed key, multiplied by transpose of C inverse times prefixed key; denominator mixes the prefixed and unprefixed keys.">
+          <msub><mi>Δ</mi><mtext>ROME</mtext></msub><mo>=</mo>
+          <mfrac>
+            <mrow><mo>(</mo><msub><mi>v</mi><mo>*</mo></msub><mo>−</mo><mi>W</mi><msup class="me-key-unprefixed"><mi>k</mi><mi>u</mi></msup><mo>)</mo><msup><mrow><mo>(</mo><msup><mi>C</mi><mn>−1</mn></msup><mover class="me-key-prefixed"><mi>k</mi><mo>¯</mo></mover><mo>)</mo></mrow><mo>⊤</mo></msup></mrow>
+            <mrow class="me-denominator"><msup><mrow><mo>(</mo><msup><mi>C</mi><mn>−1</mn></msup><mover class="me-key-prefixed"><mi>k</mi><mo>¯</mo></mover><mo>)</mo></mrow><mo>⊤</mo></msup><msup class="me-key-unprefixed"><mi>k</mi><mi>u</mi></msup></mrow>
+          </mfrac>
+        </math>
+      </div>
+      <p class="me-formula-note"><span class="me-key-prefixed">Prefixed k̄</span> and <span class="me-key-unprefixed">unprefixed kᵘ</span> can differ sharply at the first token, making the denominator tiny. The mismatch is in the implementation; theoretical Eq. 3 uses consistent keys.</p>
+      <p class="me-equation-label">C-ROME · consistent prefixed keys</p>
+      <div class="me-equation">
+        <math display="block" aria-label="C-ROME uses the prefixed mean key consistently in the residual and denominator.">
+          <msub><mi>Δ</mi><mtext>C-ROME</mtext></msub><mo>=</mo>
+          <mfrac>
+            <mrow><mo>(</mo><msub><mi>v</mi><mo>*</mo></msub><mo>−</mo><mi>W</mi><mover class="me-key-prefixed"><mi>k</mi><mo>¯</mo></mover><mo>)</mo><msup><mrow><mo>(</mo><msup><mi>C</mi><mn>−1</mn></msup><mover class="me-key-prefixed"><mi>k</mi><mo>¯</mo></mover><mo>)</mo></mrow><mo>⊤</mo></msup></mrow>
+            <mrow><msup><mrow><mo>(</mo><msup><mi>C</mi><mn>−1</mn></msup><mover class="me-key-prefixed"><mi>k</mi><mo>¯</mo></mover><mo>)</mo></mrow><mo>⊤</mo></msup><mover class="me-key-prefixed"><mi>k</mi><mo>¯</mo></mover></mrow>
+          </mfrac>
+        </math>
+      </div>
+      <p class="me-symbols">k̄: mean prefixed key; kᵘ: unprefixed key; W: MLP output projection; C: cached key second moment; v<sub>*</sub>: target value.</p>
+      <figcaption>Equations follow the implementation analysis in <a href="https://aclanthology.org/2024.findings-emnlp.236.pdf#page=3">§3.1</a>.</figcaption>
     </figure>
   </section>
 
@@ -78,10 +99,11 @@ time: 2026-10-28
     <div class="me-copy">
       <p class="me-eyebrow">03 &nbsp; / &nbsp; ACL 2025</p>
       <h2 id="mirage-title">The Mirage<br>of Model Editing</h2>
+      <p class="me-award"><a href="https://knowledgeable-lm.github.io/acl25/"><span aria-hidden="true">★</span> <strong>Best Paper Award</strong> <span>KnowFM @ ACL 2025 Workshop</span></a></p>
       <p class="me-takeaway">Does the model know it, or does the test help it?</p>
       <p>We introduce QAEdit and WILD to evaluate edits through freely generated answers. Teacher forcing and answer-length hints can make synthetic evaluations overly optimistic. On Llama-2-7b-chat and QAEdit, mean single-edit reliability across six editors drops from 96.8% to 38.5% under WILD. Realistic evaluation turns apparent success into a more demanding test of usable knowledge.</p>
       <p class="me-paper-title">The Mirage of Model Editing: Revisiting Evaluation in the Wild</p>
-      <div class="me-links"><a href="https://aclanthology.org/2025.acl-long.745/">Paper ↗</a><a href="https://github.com/WanliYoung/Revisit-Editing-Evaluation">Code, QAEdit &amp; WILD ↗</a></div>
+      <div class="me-links"><a href="https://aclanthology.org/2025.acl-long.745/">Paper ↗</a><a href="https://github.com/WanliYoung/Revisit-Editing-Evaluation">Code, QAEdit &amp; WILD ↗</a><a href="#mirage-protocols">Compare the protocols ↓</a></div>
     </div>
     <figure class="me-figure" id="me-evaluation">
       <div class="me-figure-heading"><h3>The evaluation gap</h3><span>Reliability (%)</span></div>
@@ -93,6 +115,13 @@ time: 2026-10-28
       <p class="me-gap" id="me-gap" aria-live="polite"><strong>58.3 percentage points</strong> between the two evaluations.</p>
       <figcaption><a href="https://aclanthology.org/2025.acl-long.745.pdf#page=5">Table 3</a> · Same model (Llama-2-7b-chat), dataset (QAEdit), and single-edit setting. Only the evaluation protocol changes.</figcaption>
       <details class="me-data"><summary>View all source values</summary><table><caption>Single-edit reliability on QAEdit (%)</caption><thead><tr><th scope="col">Editor</th><th scope="col">Synthetic</th><th scope="col">WILD</th></tr></thead><tbody><tr><th scope="row">FT-M</th><td>100.0</td><td>61.1</td></tr><tr><th scope="row">MEND</th><td>94.2</td><td>33.3</td></tr><tr><th scope="row">ROME</th><td>95.5</td><td>58.5</td></tr><tr><th scope="row">MEMIT</th><td>92.9</td><td>55.2</td></tr><tr><th scope="row">GRACE</th><td>98.3</td><td>1.2</td></tr><tr><th scope="row">WISE</th><td>99.8</td><td>21.6</td></tr></tbody></table></details>
+    </figure>
+    <figure class="me-figure me-wide-figure" id="mirage-protocols">
+      <div class="me-figure-heading"><h3>Same question. Two very different tests.</h3><span>Original Fig. 3</span></div>
+      <a class="me-original-figure" href="{{ '/assets/img/project/model-editing/mirage-fig3.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the original Mirage Figure 3 as an enlarged PDF">
+        <img src="{{ '/assets/img/project/model-editing/mirage-fig3.svg' | relative_url }}" width="1804" height="660" alt="Original Figure 3 from The Mirage of Model Editing: the synthetic and WILD evaluation frameworks side by side, including their context, token-by-token generation, stopping rules, and evaluation metrics.">
+      </a>
+      <figcaption>Original <a href="https://aclanthology.org/2025.acl-long.745.pdf#page=4">Fig. 3</a>, reproduced directly from the published paper. Tap the figure to enlarge.</figcaption>
     </figure>
   </section>
 
