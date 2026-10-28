@@ -191,6 +191,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - INSTALL.md
+  - implementation-notes.md
   - LICENSE
   - lighthouse_results/
   - package.json
