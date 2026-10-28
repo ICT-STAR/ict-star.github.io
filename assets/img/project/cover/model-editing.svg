@@ -2,27 +2,27 @@
   <title>A local edit, a global question</title>
   <desc>A model weight matrix with one edited cell connects to knowledge, language, and reasoning. The illustration asks how to update knowledge while preserving the model's abilities.</desc>
   <defs>
-    <linearGradient id="paper" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#f0edf7"/><stop offset="1" stop-color="#e8edf0"/></linearGradient>
-    <pattern id="weights" width="46" height="46" patternUnits="userSpaceOnUse"><rect x="5" y="5" width="31" height="31" rx="5" fill="#c8bfdc" fill-opacity=".65"/></pattern>
-    <linearGradient id="flow" x1="460" y1="460" x2="930" y2="460" gradientUnits="userSpaceOnUse"><stop stop-color="#8f7ab6"/><stop offset="1" stop-color="#6c9e91"/></linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#edf4fa"/><stop offset="1" stop-color="#edf3f4"/></linearGradient>
+    <pattern id="weights" width="46" height="46" patternUnits="userSpaceOnUse"><rect x="5" y="5" width="31" height="31" rx="5" fill="#b8cfdf" fill-opacity=".65"/></pattern>
+    <linearGradient id="flow" x1="460" y1="460" x2="930" y2="460" gradientUnits="userSpaceOnUse"><stop stop-color="#5e94bd"/><stop offset="1" stop-color="#599b9e"/></linearGradient>
   </defs>
   <rect width="1200" height="900" rx="8" fill="url(#paper)"/>
-  <path d="M60 80H1140M60 814H1140" stroke="#c8c2d3"/>
-  <g font-family="Arial, Helvetica, sans-serif" fill="#766b89" font-size="19" letter-spacing="3"><text x="65" y="56">MODEL EDITING</text><text x="1135" y="56" text-anchor="end">STAR / 2024–2026</text></g>
-  <g font-family="Georgia, 'Times New Roman', serif" fill="#443753" font-size="60" letter-spacing="-1.5"><text x="80" y="176">A local edit.</text><text x="80" y="242" font-style="italic" fill="#776295">A global question.</text></g>
-  <circle cx="390" cy="510" r="227" stroke="#c3b8d6" stroke-opacity=".5"/>
-  <circle cx="390" cy="510" r="195" stroke="#c3b8d6" stroke-opacity=".6" stroke-dasharray="3 9"/>
-  <rect x="208" y="328" width="364" height="364" rx="17" fill="#fff" fill-opacity=".58" stroke="#beb1d3"/>
+  <path d="M60 80H1140M60 814H1140" stroke="#c0d1dc"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#566b7d" font-size="19" letter-spacing="3"><text x="65" y="56">MODEL EDITING</text><text x="1135" y="56" text-anchor="end">STAR / 2024–2026</text></g>
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#263f58" font-size="60" letter-spacing="-1.5"><text x="80" y="176">A local edit.</text><text x="80" y="242" font-style="italic" fill="#0076df">A global question.</text></g>
+  <circle cx="390" cy="510" r="227" stroke="#b6cddd" stroke-opacity=".5"/>
+  <circle cx="390" cy="510" r="195" stroke="#b6cddd" stroke-opacity=".6" stroke-dasharray="3 9"/>
+  <rect x="208" y="328" width="364" height="364" rx="17" fill="#fff" fill-opacity=".58" stroke="#a8c3d7"/>
   <rect x="230" y="350" width="322" height="322" fill="url(#weights)"/>
-  <g fill="#9a88b9"><rect x="235" y="355" width="31" height="31" rx="5"/><rect x="327" y="401" width="31" height="31" rx="5"/><rect x="419" y="539" width="31" height="31" rx="5"/><rect x="281" y="585" width="31" height="31" rx="5"/><rect x="465" y="631" width="31" height="31" rx="5"/></g>
+  <g fill="#719dbe"><rect x="235" y="355" width="31" height="31" rx="5"/><rect x="327" y="401" width="31" height="31" rx="5"/><rect x="419" y="539" width="31" height="31" rx="5"/><rect x="281" y="585" width="31" height="31" rx="5"/><rect x="465" y="631" width="31" height="31" rx="5"/></g>
   <rect x="373" y="493" width="31" height="31" rx="5" fill="#cf8d66"/>
   <rect x="364" y="484" width="49" height="49" rx="9" stroke="#b97852" stroke-width="2"/>
   <path d="M389 483V449M389 535V569M363 508H329" stroke="#b97852" stroke-width="2"/>
   <path d="M414 509H629C701 509 704 371 783 371H834M629 509H834M629 509C701 509 704 647 783 647H834" stroke="url(#flow)" stroke-width="3"/>
-  <g fill="#f2f4f1" stroke="#84a297" stroke-width="2"><rect x="829" y="336" width="250" height="70" rx="35"/><rect x="829" y="474" width="250" height="70" rx="35"/><rect x="829" y="612" width="250" height="70" rx="35"/></g>
-  <g fill="#45695f" font-family="Arial, Helvetica, sans-serif" font-size="24" text-anchor="middle"><text x="954" y="380">Knowledge</text><text x="954" y="518">Language</text><text x="954" y="656">Reasoning</text></g>
-  <g fill="#7f6b9f"><circle cx="629" cy="509" r="7"/><circle cx="680" cy="460" r="4"/><circle cx="680" cy="558" r="4"/></g>
-  <text x="390" y="741" fill="#766b89" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle" letter-spacing="2">UPDATE A FACT</text>
-  <text x="954" y="741" fill="#597b6e" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle" letter-spacing="2">PRESERVE ABILITIES</text>
-  <g fill="#766b89" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2"><text x="65" y="857">DIAGNOSE</text><text x="340" y="857">UNDERSTAND</text><text x="670" y="857">EVALUATE</text><text x="1035" y="857">SCALE</text></g>
+  <g fill="#f4faf9" stroke="#82aaa9" stroke-width="2"><rect x="829" y="336" width="250" height="70" rx="35"/><rect x="829" y="474" width="250" height="70" rx="35"/><rect x="829" y="612" width="250" height="70" rx="35"/></g>
+  <g fill="#365f63" font-family="Arial, Helvetica, sans-serif" font-size="24" text-anchor="middle"><text x="954" y="380">Knowledge</text><text x="954" y="518">Language</text><text x="954" y="656">Reasoning</text></g>
+  <g fill="#4b8fbc"><circle cx="629" cy="509" r="7"/><circle cx="680" cy="460" r="4"/><circle cx="680" cy="558" r="4"/></g>
+  <text x="390" y="741" fill="#566b7d" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle" letter-spacing="2">UPDATE A FACT</text>
+  <text x="954" y="741" fill="#4c7378" font-family="Arial, Helvetica, sans-serif" font-size="19" text-anchor="middle" letter-spacing="2">PRESERVE ABILITIES</text>
+  <g fill="#566b7d" font-family="Arial, Helvetica, sans-serif" font-size="17" letter-spacing="2"><text x="65" y="857">DIAGNOSE</text><text x="340" y="857">UNDERSTAND</text><text x="670" y="857">EVALUATE</text><text x="1035" y="857">SCALE</text></g>
 </svg>
