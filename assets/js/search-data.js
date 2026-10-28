@@ -151,9 +151,9 @@ ninja.data = [{
               window.location.href = "/people/youduliu.html";
             },},{id: "projects-model-editing",
           title: 'Model Editing',
-          description: "Model Editing.",
+          description: "From diagnosing model collapse to reliable, scalable knowledge updates. Four studies on model editing, 2024–2026.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/example/";
+              window.location.href = "/projects/model_editing/";
             },},{id: "seminars-reasoning-errors-of-llms",
           title: 'Reasoning Errors of LLMs',
           description: "",
