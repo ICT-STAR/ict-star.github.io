@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teacher forcing 与自回归：逐步演示</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 30px 24px; color: #263641; background: #f6f8fa; font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 1560px; margin: auto; }
+  h1 { margin: 0 0 8px; font-size: 22px; font-weight: 500; }
+  .subtitle { margin: 0 0 22px; color: #64717a; }
+  .art { overflow-x: auto; background: white; border: 1px solid #dde4e9; border-radius: 5px; }
+  .art svg { display: block; width: 100%; min-width: 1000px; height: auto; }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 20px 0 14px; }
+  button { padding: 8px 15px; border: 1px solid #cbd8e2; border-radius: 4px; color: #1269a5; background: white; font: inherit; cursor: pointer; }
+  button:hover { background: #eaf2f8; }
+  button:focus-visible, input:focus-visible { outline: 2px solid #0076df; outline-offset: 3px; }
+  input[type=range] { flex: 1; min-width: 180px; accent-color: #0076df; }
+  output { min-width: 78px; text-align: right; color: #64717a; font-variant-numeric: tabular-nums; }
+  .phase { min-height: 60px; margin: 0; padding: 15px 18px; border-left: 3px solid #74a6c6; background: white; }
+  .hint { color: #64717a; font-size: 12px; margin: 14px 0 0; }
+  @media (max-width: 700px) { body { padding: 18px 12px; } h1 { font-size: 19px; } .controls { gap: 8px; } }
+</style>
+<main>
+  <h1>Teacher forcing 与自回归：输入、输出、再输入</h1>
+  <p class="subtitle">同一张原图，逐步展开两种生成流程，最后对比评分逻辑。</p>
+  <div class="art" tabindex="0" aria-label="动画图，窄屏可横向滚动"><!--ANIMATED_SVG--></div>
+  <div class="controls">
+    <button type="button" id="play">暂停</button>
+    <button type="button" id="replay">重播</button>
+    <button type="button" id="step">下一步</button>
+    <input id="progress" type="range" min="0" max="27" step="0.05" value="0" aria-label="动画进度，单位秒">
+    <output id="time">0.0 / 28s</output>
+  </div>
+  <p class="phase" id="phase" aria-live="off"></p>
+  <p class="hint">示意动画使用论文中的固定例子，并非模型实时推理。小屏幕可横向滑动原图。尊重“减少动态效果”设置，亦可手动播放。</p>
+</main>
+<script>
+  const timeline = /*TIMELINE_DATA*/;
+  const svg = document.getElementById("mirage-animation");
+  const play = document.getElementById("play");
+  const replay = document.getElementById("replay");
+  const step = document.getElementById("step");
+  const progress = document.getElementById("progress");
+  const phase = document.getElementById("phase");
+  const clock = document.getElementById("time");
+  let stopAt = null;
+  function paint() {
+    let time = svg.getCurrentTime() % timeline.duration;
+    if (stopAt !== null && time >= stopAt) {
+      svg.setCurrentTime(stopAt);
+      svg.pauseAnimations();
+      time = stopAt;
+      stopAt = null;
+    }
+    play.textContent = svg.animationsPaused() ? "播放" : "暂停";
+    progress.value = time;
+    clock.textContent = time.toFixed(1) + " / 28s";
+    phase.textContent = timeline.stages.filter(row => row[0] <= time).at(-1)[1];
+    requestAnimationFrame(paint);
+  }
+  play.addEventListener("click", () => {
+    svg.classList.add("motion-enabled");
+    stopAt = null;
+    if (svg.animationsPaused()) svg.unpauseAnimations(); else svg.pauseAnimations();
+  });
+  replay.addEventListener("click", () => {
+    svg.classList.add("motion-enabled");
+    stopAt = null;
+    svg.setCurrentTime(0);
+    svg.unpauseAnimations();
+  });
+  step.addEventListener("click", () => {
+    svg.classList.add("motion-enabled");
+    const time = svg.getCurrentTime() % timeline.duration;
+    const next = timeline.steps.find(value => value > time + 0.1);
+    if (next === undefined) { svg.setCurrentTime(0); stopAt = timeline.steps[0]; }
+    else stopAt = next;
+    svg.unpauseAnimations();
+  });
+  progress.addEventListener("input", () => {
+    svg.classList.add("motion-enabled");
+    stopAt = null;
+    svg.setCurrentTime(Number(progress.value));
+    svg.pauseAnimations();
+  });
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    svg.setCurrentTime(25);
+    svg.pauseAnimations();
+  }
+  requestAnimationFrame(paint);
+</script>
+</html>

@@ -1,0 +1,26 @@
+\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\documentclass[11pt]{article}
+\usepackage[final]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{pifont}
+\usepackage{fontawesome5}
+\usepackage{tikz}
+\usetikzlibrary{shapes.symbols,arrows.meta,backgrounds,positioning,fit,mindmap,trees,calc,tikzmark,shapes,shapes.arrows,fadings,automata,decorations.pathreplacing,patterns,shapes.geometric,intersections}
+\input{color}
+\pagestyle{empty}
+\makeatletter
+\newcommand{\SVGbegin}[1]{\edef\svgopen{\noexpand\pgfsysprotocol@literal{<g id="#1">}}\svgopen}
+\newcommand{\SVGend}{\pgfsysprotocol@literal{</g>}}
+\makeatother
+\begin{document}
+\setcounter{figure}{2}
+\input{Fig/eval_framework_tikz}
+\clearpage
+\end{document}

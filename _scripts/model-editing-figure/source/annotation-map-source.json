@@ -1,0 +1,262 @@
+{
+  "syn-input-0": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de0) at ($(ip2.north east) + (1em,0)$) {\\texttt{<BOS>}};"
+  },
+  "syn-input-1": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de1) at ($(de0.north east) + (0.15em,0)$) {BC};"
+  },
+  "syn-input-2": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de2) at ($(de1.north east) + (0.15em,0)$) {Jean};"
+  },
+  "syn-input-3": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de3) at ($(de2.north east) + (0.15em,0)$) {and};"
+  },
+  "syn-input-4": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de4) at ($(de3.north east) + (0.15em,0)$) {Toby};"
+  },
+  "syn-in-arrow-\\the\\numexpr\\x-5\\relax": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, puerto_rico, thick] ($(sa1\\x-hs.south)+(0, -1.1em)$) to ++(0, 1.08em);"
+  },
+  "syn-output-0": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=base,\n      text depth=.15em,\n      xshift=-0.3em,\n      ]\n    (de_out1) at ($(sa15-hs.north) + (0, 5.5em)$) {Beyonc\\'e};"
+  },
+  "syn-output-1": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=base, \n      text depth=.15em,\n      ]\n    (de_out2) at ($(sa16-hs.north |- de_out1.base)$) {Jean};"
+  },
+  "syn-output-2": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n  anchor=base, \n      text depth=.15em,\n  ]\n(de_out3) at ($(sa17-hs.north |- de_out1.base)$) {is};"
+  },
+  "syn-output-3": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n  anchor=base, \n      text depth=.15em,\n  ]\n(de_out4) at ($(sa18-hs.north |- de_out1.base)$) {Toby};"
+  },
+  "syn-output-4": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n  anchor=base, \n      text depth=.15em,\n  ]\n(de_out5) at ($(sa19-hs.north |- de_out1.base)$) {Gad};"
+  },
+  "syn-groundtruth-0": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n       anchor=base, \n      text depth=.15em,\n      ]\n    (gt5) at ($(sa15-hs.north) + (0, 7.7em)$) {BC};"
+  },
+  "syn-groundtruth-\\the\\numexpr\\x-5\\relax": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=base, \n      text depth=.15em,\n      ]\n    (gt\\x) at ($(sa1\\x-hs.south |- gt5.base)$) {\\y};"
+  },
+  "syn-groundtruth-label": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=base east,\n      align=right,\n      text depth=.15em,\n      text width=2em,\n      color=tuatara,\n      font=\\fontsize{4pt}{5pt}\\selectfont \\linespread"
+  },
+  "syn-output-label": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=base east,\n      text depth=.15em,\n      color=tuatara,\n      font=\\fontsize{4pt}{5pt}\\selectfont\n      ]\n    (op_label) at ($(de_out1.west) + (0.05em"
+  },
+  "syn-groundtruth-box": {
+    "prefix": "syn",
+    "source": "\\node[\n\t          draw=tuatara!42, thin,\n\t          rounded corners=1pt,\n\t          fit={(gt5) (gt9) ($(gt5.west) + (-1em,0.02em)$)  ($(gt9.east) + (0.3em, 0.55em)$)},\n\t          i"
+  },
+  "syn-output-box": {
+    "prefix": "syn",
+    "source": "\\node[\n\t          draw=tuatara!42, thin,\n\t          rounded corners=1pt,\n\t          fit={(de_out1) (de_out5) ($(de_out5.east) + (.3em,0.55em)$)},\n\t          inner sep=-0.5pt,\n\t    "
+  },
+  "syn-out-arrow-\\the\\numexpr\\x-5\\relax": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, puerto_rico, thick] ($(sa3\\x-hs.north)+(0, 0.04em)$) to ++(0, 1.05em) ;"
+  },
+  "syn-stop-sign": {
+    "prefix": "syn",
+    "source": "\\node[regular polygon, regular polygon sides=8, draw=flamingo!200, fill=flamingo, text=white, minimum size=0.2em, inner sep=0pt, outer sep=0pt] (stop) at ($(gt9.east) + (1.3em, -10"
+  },
+  "syn-stop-path": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, flamingo, thick, dash pattern=on 1pt off 0.8pt] (gt_box.east) to ($(gt_box.east -| stop.north)$) to node[midway, sloped=true, color=black, font=\\scriptsize, yshift=0"
+  },
+  "syn-match-\\the\\numexpr\\x-5\\relax": {
+    "prefix": "syn",
+    "source": "\\draw [d_FARROW, dotted, dash pattern=on 0.6pt off 0.48pt] ($(gt\\x.south)+(0, 0.32em)$) -- node[midway, sloped=false, color=\\z, font=\\scriptsize] (m\\x) {\\y}  ++(0, -1.82em) ;"
+  },
+  "syn-metric-m-box": {
+    "prefix": "syn",
+    "source": "\\node[densely dotted,\n          draw=flamingo,\n          fit={(m5) (m9) },\n          inner sep=-2.5pt,\n\t    ] (m_box) {};"
+  },
+  "syn-metric-arrow-0": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, red, densely dotted] ($(m_box.west)+(-0.1em, 0)$) to ++(-0.6em, 0);"
+  },
+  "syn-metric-arrow-1": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, red, densely dotted] ($(m_box.west)+(-2.5em, 0)$) to ++(0.9em, 0);"
+  },
+  "syn-metric-result": {
+    "prefix": "syn",
+    "source": "\\node[text_node,\n      anchor=center,\n      align=center,\n      text=flamingo!62!red,\n    ]\n    (result) at ($(gt9.east) + (-8.8em, -1.1em)$) {3/5};"
+  },
+  "syn-metric-arrow-2": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW] ($(gt_box.west)+(0, 0)$) to ++(-3em, 0) to ++(0, -0.55em);"
+  },
+  "syn-metric-arrow-3": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW] ($(output_box.west)+(0, 0)$) to ++(-3em, 0) to ++(0, 0.55em);"
+  },
+  "syn-metric-metric": {
+    "prefix": "syn",
+    "source": "\\node[project,\n      anchor=center,\n      align=center,\n      font=\\fontsize{7.2pt}{9pt}\\selectfont\n    ]\n    (metric) at ($(gt.west) + (-0.7em, -1.6em)$) {match ratio};"
+  },
+  "syn-feedback-1": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, red] ($(gt5.east)+(-0.2em, 0)$) to ($(gt5.east)+(0.4em, 0)$) to ($(gt5.east)+(0.4em, -10.9em)$) to ($(target1 -| de1.south)$) to ($(de1.south)+(0, 0.2em)$) ;"
+  },
+  "syn-feedback-2": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, red\n    ] ($(gt6.east)+(-0.2em, 0)$) to ++ (0.3em, 0) to ++(0, -10.9em) to ($(target1 -| de2.south)$) to ($(de2.south)+(0, 0.2em)$);"
+  },
+  "syn-feedback-3": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, red\n    ] ($(gt7.east)+(-0.25em, 0)$) to ++ (0.45em, 0) to ++(0, -10.9em) to ($(target1 -| de3.south)$) to ($(de3.south)+(0, 0.2em)$);"
+  },
+  "syn-feedback-4": {
+    "prefix": "syn",
+    "source": "\\draw [FARROW, red\n    ] ($(gt8.east)+(-0.2em, 0)$) to ++ (0.3em, 0) to ++(0, -10.9em) to ($(target1 -| de4.south)$) to ($(de4.south)+(0, 0.35em)$);"
+  },
+  "wild-input-0": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de0) at ($(ip2.north east) + (1em,0)$) {\\texttt{<BOS>}};"
+  },
+  "wild-input-1": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de1) at ($(de0.north east) + (0,0)$) {Beyonc\\'e};"
+  },
+  "wild-input-2": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de2) at ($(de1.north east) + (0.15em,0)$) {is};"
+  },
+  "wild-input-3": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de3) at ($(de2.north east) + (0.8em,0)$) {the};"
+  },
+  "wild-input-4": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=north west]\n    (de4) at ($(de3.north east) + (0.35em,0)$) {writer};"
+  },
+  "wild-in-arrow-\\the\\numexpr\\x-5\\relax": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, puerto_rico, thick] ($(sa1\\x-hs.south)+(0, -1.1em)$) to ++(0, 1.08em);"
+  },
+  "wild-output-0": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=base,        \n      text depth=.15em,\n      xshift=-0.3em,\n      ]\n    (de_out1) at ($(sa15-hs.north) + (0, 5.5em)$) {Beyonc\\'e};"
+  },
+  "wild-output-1": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=base,        \n      text depth=.15em,\n      ]\n    (de_out2) at ($(sa16-hs.north |- de_out1.base)$) {is};"
+  },
+  "wild-output-2": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n  anchor=base,        \n      text depth=.15em,\n  ]\n(de_out3) at ($(sa17-hs.north |- de_out1.base)$) {the};"
+  },
+  "wild-output-3": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n  anchor=base,        \n      text depth=.15em,\n  ]\n(de_out4) at ($(sa18-hs.north |- de_out1.base)$) {writer};"
+  },
+  "wild-output-4": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=base,        \n      text depth=.15em,\n      font=\\fontsize{4.4pt}{5pt}\\selectfont,\n      xshift=0.4em,\n      opacity=0.5,\n  ]\n(de_out5) at ($(sa19-hs."
+  },
+  "wild-groundtruth": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n       anchor=base,\n      text depth=.15em,\n      ]\n    (gt0) at ($(sa15-hs.north) + (1.6em, 7.7em)$) {BC Jean and Toby Gad};"
+  },
+  "wild-groundtruth-label": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=base east,\n      align=right,\n      text depth=.15em,\n      text width=2em,\n      color=tuatara,\n      font=\\fontsize{4pt}{5pt}\\selectfont \\linespread"
+  },
+  "wild-output-label": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n      anchor=base east,\n      text depth=.15em,\n      color=tuatara,\n      font=\\fontsize{4pt}{5pt}\\selectfont\n      ]\n    (op_label) at ($(de_out1.west) + (-0.15e"
+  },
+  "wild-groundtruth-box": {
+    "prefix": "wild",
+    "source": "\\node[fill=athens_gray!42, \n\t          draw=tuatara!42, thin,\n\t          rounded corners=1pt,\n\t          fit={(gt0)  ($(gt0.west) + (-0.2em, 0)$)  ($(gt0.east) + (0.2em, 0.55em)$)}"
+  },
+  "wild-output-box": {
+    "prefix": "wild",
+    "source": "\\node[fill=athens_gray!42, \n\t          draw=tuatara!42, thin,\n\t          rounded corners=1pt,\n\t          fit={(de_out1) (de_out4) ($(de_out1.west) + (-0.2em,0)$) ($(de_out4.east) +"
+  },
+  "wild-out-arrow-\\the\\numexpr\\x-5\\relax": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, puerto_rico, thick] ($(sa3\\x-hs.north)+(0, 0.04em)$) to ++(0, 1.05em) ;"
+  },
+  "wild-stop-sign": {
+    "prefix": "wild",
+    "source": "\\node[regular polygon, regular polygon sides=8, draw=flamingo!200, fill=flamingo, text=white, minimum size=0.2em, inner sep=0pt, outer sep=0pt] (stop) at ($(gt9.east) + (1.25em, -1"
+  },
+  "wild-stop-path": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, flamingo, thick, dash pattern=on 1pt off 0.8pt] ($(de_out5.east)+ (-0.1em, 0.05em) $) to ($(stp_p -| stop.north)$) to node[midway, sloped=true, color=black, font=\\sc"
+  },
+  "wild-metric-metric": {
+    "prefix": "wild",
+    "source": "\\node[\n      anchor=center,\n      align=center,\n    ]\n    (metric) at ($(gt.west) + (-0.6em, -1.6em)$) {\\textcolor{ship_gray}{\\large \\faIcon{robot}}};"
+  },
+  "wild-metric-metric-label": {
+    "prefix": "wild",
+    "source": "\\node[text width=2.3em, text depth=.1em]\n    (metric_label) at ($(metric.west) + (-0.7em, 0.3em)$) {\\fontsize{6pt}{1pt}\\selectfont  \\bfseries LLM-as-};"
+  },
+  "wild-metric-metric-label1": {
+    "prefix": "wild",
+    "source": "\\node[text width=2.3em, text depth=.1em, align=left, anchor=west]\n    (metric_label1) at ($(metric_label.west) + (0, -0.6em)$) {\\fontsize{6pt}{1pt}\\selectfont  \\bfseries  a-Judge};"
+  },
+  "wild-metric-metric-an": {
+    "prefix": "wild",
+    "source": "\\node[text_node]\n    (metric_an) at ($(metric_label.west) + (0, -0.3em)$) {\\textcolor{flamingo}{\\ding{205}}};"
+  },
+  "wild-metric-result": {
+    "prefix": "wild",
+    "source": "\\node[text_node,\n     text=flamingo!62!red,\n    ]\n    (result) at ($(metric.east) + (1em, 0)$) {0};"
+  },
+  "wild-metric-arrow-0": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, red, densely dotted] ($(result.west)+(-0.9em, 0)$) to ++(1.1em, 0);"
+  },
+  "wild-metric-arrow-1": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW] ($(gt_box.west)+(0, 0)$) to ++(-3em, 0) to ++(0, -0.55em);"
+  },
+  "wild-metric-arrow-2": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW] ($(output_box.west)+(0, 0)$) to ++(-3em, 0) to ++(0, 0.55em);"
+  },
+  "wild-feedback-1": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, red] ($(de_out1.east)+(-0.2em, 0)$) to ($(de_out1.east)+(0, 0)$) to ++(0, -8.7em) to ($(target1 -| de1.south)$) to ($(de1.base)+(0, -0.1em)$) ;"
+  },
+  "wild-feedback-2": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, red] ($(de_out2.east)+(-0.2em, 0)$) to ++ (1.1em, 0) to ++(0, -8.7em) to ($(target1 -| de2.south)$) to ($(de2.base)+(0, -0.1em)$);"
+  },
+  "wild-feedback-3": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, red] ($(de_out3.east)+(-0.2em, 0)$) to ++ (0.35em, 0) to ++(0, -8.7em) to ($(target1 -| de3.south)$) to ($(de3.base)+(0, -0.1em)$);"
+  },
+  "wild-feedback-4": {
+    "prefix": "wild",
+    "source": "\\draw [FARROW, red] ($(de_out4.east)+(-0.2em, 0)$) to ++ (0.2em, 0) to ++(0, -8.7em) to ($(target1 -| de4.south)$) to ($(de4.base)+(0, -0.1em)$);"
+  },
+  "syn-method-summary": {
+    "prefix": "syn",
+    "source": "\\draw [semithick, decorate, decoration={brace, amplitude=5pt, mirror}] ([yshift=-0.6em, xshift=-0.4em] de1.south west) -- ([yshift=-0.6em, xshift=6.2em] de1.south west) node[text_n"
+  },
+  "wild-method-summary": {
+    "prefix": "wild",
+    "source": "\\draw [semithick, decorate, decoration={brace, amplitude=5pt, mirror}] ([yshift=-0.6em, xshift=-1.6em] de1.south west) -- ([yshift=-0.6em, xshift=7.5em] de1.south west) node[text_n"
+  }
+}

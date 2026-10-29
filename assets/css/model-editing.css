@@ -79,6 +79,17 @@
 .me-rome-data th:first-child { padding-left: 0; text-align: left; font-weight: 400; }
 .me-rome-data thead th { color: var(--me-muted); font-size: 11px; }
 .me-wide-figure { grid-column: 1 / -1; min-width: 0; scroll-margin-top: 95px; }
+.me-animation-viewport { overflow-x: auto; background: #fff; border-radius: 3px; }
+.me-animation-art { display: block; width: 100%; min-width: 900px; height: auto; aspect-ratio: 456.742875 / 167.601056; pointer-events: none; }
+.me-animation-art img { width: 100%; height: auto; }
+.me-animation-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; }
+.me-animation-controls[hidden] { display: none; }
+.me-animation-controls button { padding: 6px 11px; border: 1px solid var(--me-line); border-radius: 3px; color: var(--me-accent); background: var(--me-soft); font: inherit; font-size: 12px; cursor: pointer; }
+.me-animation-controls button:hover { border-color: var(--me-accent); }
+.me-animation-controls input { flex: 1; min-width: 100px; accent-color: var(--me-accent); }
+.me-animation-controls output { min-width: 76px; text-align: right; color: var(--me-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.me-animation-controls button:focus-visible, .me-animation-controls input:focus-visible, .me-animation-viewport:focus-visible { outline: 2px solid var(--me-accent); outline-offset: 4px; }
+.me-animation-hint { display: none; margin: 14px 0 0; color: var(--me-muted); font-size: 12px; }
 .me-select-label { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 12px; color: var(--me-muted); margin-bottom: 26px; }
 .me-select-label select { font: inherit; color: var(--me-ink); background: var(--global-card-bg-color, white); border: 1px solid var(--me-line); border-radius: 4px; padding: 7px 25px 7px 10px; max-width: 65%; }
 .me-comparison-row { margin-bottom: 22px; }
@@ -136,6 +147,7 @@ html[data-theme="dark"] .me-project { --me-muted: #b0b8bf; --me-series: #7baecb;
   .me-project h2 { font-size: 32px; }
   .me-figure { padding: 23px; }
   .me-equation { font-size: 17px; }
+  .me-animation-hint { display: block; }
   .me-tokens span { width: 28px; height: 28px; }
   .me-outlook { padding: 45px 0; }
   .me-outlook > p:not([class]) { font-size: 24px; }

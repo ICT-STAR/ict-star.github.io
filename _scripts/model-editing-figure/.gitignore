@@ -1,0 +1,7 @@
+/build/
+/source/*.aux
+/source/*.dvi
+/source/*.log
+/source/*.out
+/source/*.synctex.gz
+__pycache__/

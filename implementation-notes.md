@@ -29,3 +29,19 @@
 - Implementation notes: Extract the original figure as a self-contained SVG with a cropped PDF enlargement link. Remove the superseded animated SVG and its page controls, styles, and JavaScript.
 - Tests: Original Fig. 3 was rendered and checked against the published PDF; SVG XML, internal resource references, and cropping passed. Jekyll live rendering and JavaScript syntax passed. Browser checks at 1440 and 320 px confirmed the table is in the left column, the original figure loads, there are no page overflows or remaining animation controls, and the GRACE chart selection still gives 98.3% / 1.2%. Light/dark visual checks, local asset/anchor checks, and whitespace checks passed; no browser console errors.
 - Follow-ups: Original figures remain available as vector PDFs for enlargement on small screens.
+
+## 2026-10-29: Integrate the approved Mirage animation and preserve its generator
+
+- Assumptions/decisions: Replace only the Mirage Fig. 3 display with the approved 28-second animation. Keep the static original PDF and the pre-existing modified static SVG. Retain the generator and annotated TikZ in the repository.
+- Tradeoffs/deviations: Use a same-origin SVG object for native playback controls. Keep detailed artwork horizontally scrollable on phones. Start the first loop when the figure enters view; honor reduced-motion preferences.
+- Implementation notes: Animation generation lives in _scripts/model-editing-figure/; one Python command rebuilds the public SVG. Native controls read duration and step endpoints from passive SVG metadata, so timing remains defined by the generator. Braces, ② labels, and output frames appear after generation, as approved. Generator sources and private build artifacts are excluded from Jekyll output.
+- Tests: Generator rebuild passed from multiple working directories; public SVG matches the approved animation except passive timing metadata. Jekyll build passed with the existing local preview dependency configuration. JavaScript syntax, unique IDs, local asset/anchor references, SVG XML, cache-busted asset links, and generator/private-build exclusion passed. Browser checks at 1440 and 320 px verified loading, first-view autoplay, pause, replay, seeking, next-step stops at 0.5 and 16.9 s, control wrapping, horizontal panning, and light/dark presentation. Existing GRACE chart selection still gives 98.3% / 1.2%; no console errors. Independent code review found no actionable issues.
+- Follow-ups: None identified.
+
+## 2026-10-29: Remove the public animation's Next step control
+
+- Assumptions/decisions: Apply the request to the project page; keep the preserved private development player separate.
+- Tradeoffs/deviations: None.
+- Implementation notes: Remove the button, click handler, and step-stop state. Public SVG metadata now contains only duration. Play/pause, replay, seeking, and the animation sequence remain available.
+- Tests: JavaScript syntax and whitespace checks passed. Live Jekyll output has no Next step element or step-stop logic, and public metadata contains only duration. Browser verification shows exactly two playback buttons (Pause/Play and Replay), a working progress display and slider, and no console errors.
+- Follow-ups: None identified.

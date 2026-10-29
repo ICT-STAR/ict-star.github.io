@@ -10,7 +10,7 @@ date: 2026-10-28
 time: 2026-10-28
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/model-editing.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/model-editing.css' | relative_url | bust_file_cache }}">
 
 <article class="me-project">
   <header class="me-hero">
@@ -117,11 +117,20 @@ time: 2026-10-28
       <details class="me-data"><summary>View all source values</summary><table><caption>Single-edit reliability on QAEdit (%)</caption><thead><tr><th scope="col">Editor</th><th scope="col">Synthetic</th><th scope="col">WILD</th></tr></thead><tbody><tr><th scope="row">FT-M</th><td>100.0</td><td>61.1</td></tr><tr><th scope="row">MEND</th><td>94.2</td><td>33.3</td></tr><tr><th scope="row">ROME</th><td>95.5</td><td>58.5</td></tr><tr><th scope="row">MEMIT</th><td>92.9</td><td>55.2</td></tr><tr><th scope="row">GRACE</th><td>98.3</td><td>1.2</td></tr><tr><th scope="row">WISE</th><td>99.8</td><td>21.6</td></tr></tbody></table></details>
     </figure>
     <figure class="me-figure me-wide-figure" id="mirage-protocols">
-      <div class="me-figure-heading"><h3>Same question. Two very different tests.</h3><span>Original Fig. 3</span></div>
-      <a class="me-original-figure" href="{{ '/assets/img/project/model-editing/mirage-fig3.pdf' | relative_url }}" target="_blank" rel="noopener" aria-label="Open the original Mirage Figure 3 as an enlarged PDF">
-        <img src="{{ '/assets/img/project/model-editing/mirage-fig3.svg' | relative_url }}" width="1804" height="660" alt="Original Figure 3 from The Mirage of Model Editing: the synthetic and WILD evaluation frameworks side by side, including their context, token-by-token generation, stopping rules, and evaluation metrics.">
-      </a>
-      <figcaption>Original <a href="https://aclanthology.org/2025.acl-long.745.pdf#page=4">Fig. 3</a>, reproduced directly from the published paper. Tap the figure to enlarge.</figcaption>
+      <div class="me-figure-heading"><h3>Same question. Two very different tests.</h3><span>Animated Fig. 3</span></div>
+      <div class="me-animation-viewport" tabindex="0" role="region" aria-label="Animated comparison of synthetic and WILD evaluation; scroll horizontally on small screens">
+        <object id="me-mirage-animation" class="me-animation-art" type="image/svg+xml" data="{{ '/assets/img/project/model-editing/mirage-fig3-animated.svg' | relative_url | bust_file_cache }}" width="1800" height="661" role="img" aria-label="Step-by-step comparison: synthetic evaluation feeds reference tokens, while WILD feeds its own predictions. After generation, the figure compares token matching with complete-answer judgment.">
+          <img src="{{ '/assets/img/project/model-editing/mirage-fig3.svg' | relative_url }}" alt="Static original Figure 3 comparing synthetic and WILD evaluation.">
+        </object>
+      </div>
+      <div class="me-animation-controls" id="me-animation-controls" role="group" aria-label="Figure animation playback" hidden>
+        <button id="me-animation-play" type="button" aria-controls="me-mirage-animation">Play</button>
+        <button id="me-animation-replay" type="button" aria-controls="me-mirage-animation">Replay</button>
+        <input id="me-animation-progress" type="range" min="0" max="27" step="0.05" value="0" aria-label="Figure animation progress in seconds">
+        <output id="me-animation-time" for="me-animation-progress">0.0 / 28s</output>
+      </div>
+      <p class="me-animation-hint">On small screens, swipe across the figure to compare both protocols.</p>
+      <figcaption>Animated from the original TikZ for <a href="https://aclanthology.org/2025.acl-long.745.pdf#page=4">Fig. 3</a>. Follow the input/output loops, then compare how the two protocols score the answer. <a href="{{ '/assets/img/project/model-editing/mirage-fig3.pdf' | relative_url }}" target="_blank" rel="noopener">Original figure ↗</a></figcaption>
     </figure>
   </section>
 
@@ -144,4 +153,4 @@ time: 2026-10-28
   <footer class="me-outlook"><p class="me-eyebrow">THE THREAD THAT CONNECTS THEM</p><p>Reliable editing means more than changing an answer.<br>It means keeping the model worth asking.</p><a href="{{ '/publications/' | relative_url }}">Explore our publications <span aria-hidden="true">↗</span></a></footer>
 </article>
 
-<script src="{{ '/assets/js/model-editing.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/model-editing.js' | relative_url | bust_file_cache }}" defer></script>

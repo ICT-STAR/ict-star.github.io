@@ -192,6 +192,7 @@ exclude:
   - Gemfile.lock
   - INSTALL.md
   - implementation-notes.md
+  - _scripts/model-editing-figure/
   - LICENSE
   - lighthouse_results/
   - package.json
