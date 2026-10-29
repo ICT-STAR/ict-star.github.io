@@ -154,6 +154,11 @@ ninja.data = [{
           description: "From diagnosing model collapse to reliable, scalable knowledge updates. Four studies on model editing, 2024–2026.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/model_editing/";
+            },},{id: "projects-knowledge-boundaries-amp-uncertainty",
+          title: 'Knowledge Boundaries &amp;amp; Uncertainty',
+          description: "Eight studies on making LLM knowledge accessible, confidence informative, and knowledge use reliable—from factual recall and self-consistent errors to RAG and controllable abstention.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/knowledge_boundaries/";
             },},{id: "seminars-reasoning-errors-of-llms",
           title: 'Reasoning Errors of LLMs',
           description: "",
