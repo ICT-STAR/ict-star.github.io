@@ -1,0 +1,16 @@
+<section class="kb-references" id="publications" aria-labelledby="kb-references-title">
+  <header>
+    <p class="kb-eyebrow">PUBLICATIONS &amp; RESOURCES</p>
+    <h2 id="kb-references-title">The papers behind this research.</h2>
+  </header>
+  <ol class="kb-reference-list">
+    {% for paper in site.data.knowledge_publications.papers %}
+    <li id="reference-{{ paper.id }}">
+      <p class="kb-reference-title"><a href="{{ paper.url }}">{{ paper.title | escape }}</a></p>
+      <p class="kb-reference-authors">{{ paper.authors | join: ', ' | escape }}.</p>
+      <p class="kb-reference-venue">{{ paper.venue | escape }} · {{ paper.status | escape }}{% if paper.doi %} · <a href="https://doi.org/{{ paper.doi }}">doi:{{ paper.doi }}</a>{% endif %}</p>
+      <div class="kb-links"><a href="#{{ paper.id }}">Research summary ↑</a><a href="{{ paper.pdf }}">PDF ↗</a>{% if paper.code %}<a href="{{ paper.code }}">Code ↗</a>{% endif %}{% if paper.project %}<a href="{{ paper.project }}">Project ↗</a>{% endif %}{% if paper.preprint %}<a href="{{ paper.preprint }}">Author preprint ↗</a>{% endif %}</div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>

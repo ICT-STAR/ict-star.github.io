@@ -45,3 +45,59 @@
 - Implementation notes: Remove the button, click handler, and step-stop state. Public SVG metadata now contains only duration. Play/pause, replay, seeking, and the animation sequence remain available.
 - Tests: JavaScript syntax and whitespace checks passed. Live Jekyll output has no Next step element or step-stop logic, and public metadata contains only duration. Browser verification shows exactly two playback buttons (Pause/Play and Replay), a working progress display and slider, and no console errors.
 - Follow-ups: None identified.
+
+## 2026-10-29: Knowledge boundaries and uncertainty research project
+
+- Assumptions/decisions: Use English to match the website. Present eight studies as a shared research agenda: an opening diagnosis followed by Access, Assess, and Act. Mark both arXiv works as preprints and keep calibration distinct from error discrimination.
+- Tradeoffs/deviations: Use source-table interactions for recall and detection; retain original vector figures for calibration and selective answering rather than inventing continuous curves. Conceptual diagrams are explicitly identified.
+- Implementation notes: Add a new collection page and cover without changing the model-editing project. Scoped styles inherit al-folio typography and theme variables. Jekyll renders accessible chart tables from one JSON data file; dependency-free JavaScript reads those same tables. Preserve vector generation/extraction sources and exclude the source directory from the generated website.
+- Tests: Full Jekyll build passed using the existing local compatibility Gemfile and ImageMagick override. JavaScript syntax, whitespace, unique IDs, one h1, local assets/anchors, project-list integration, and source-directory exclusion passed. Browser QA passed at 1280, 390, and 320 px with no page overflow, in light and dark themes; all 12 recall pairs and five detection options returned the original values, including SimpleQA decreases. Verified native source-table expansion on a 320 px screen, figure loading, and original vector rendering. No browser console warnings/errors. Independent scientific and implementation reviews found no actionable issues.
+- Follow-ups: The local compatibility build retains the previously documented dependency limitations; no dependency files were changed.
+
+## 2026-10-29: Refine the knowledge research page and its discoverability
+
+- Assumptions/decisions: Treat the editing page as an example of a Jekyll project file, not a visual template. Use an editorial overview with a single integrated subtitle, full linked paper titles, larger direct results, and different compositions for different research questions.
+- Tradeoffs/deviations: Replace the two dropdown charts with complete static result figures. Keep the original pass@k figure and redraw verified detection values; provide a portrait detection view for phones. Reuse the student's TAPS interaction and empirical data locally, retaining MIT attribution and the original project links.
+- Implementation notes: Add a single publication registry for visible headings, citations, JSON-LD, and a downloadable Markdown overview. Metadata is scoped to this project; canonical/title/description behavior remains native to al-folio. Knowledgeable-R1 combines an accurate three-view training schematic with a clearly scoped Table 2 result. Retain all figure generation code. The existing preview stays running for the user's review.
+- Tests: Local compatibility build, JavaScript syntax, whitespace, unique IDs, all local asset/anchor references, and all eight full paper headings passed. JSON-LD parses into 12 unique entities with eight ScholarlyArticle records; canonical, OG/Twitter, and Markdown encoding use the production domain even in local preview. Browser checks passed at 1280, 390, and 320 px without page overflow, including portrait result artwork, native TAPS pause/slider interaction, automatic iframe height, and light/dark theme synchronization. At 50.45% coverage the retained empirical TAPS demo gives 41.3% / 37.3% / 33.3% risk as expected. No browser warnings/errors. Primary-paper and implementation reviews passed; original TAPS curves/SVG were verified unchanged. New CSS files pass the site's CSSminify2 compressor independently.
+- Follow-ups: The existing 619 KB global stylesheet makes a separate full production-minification check slow; that check was stopped, while normal local builds and direct minification of new CSS passed. Search indexing and AI citation depend on external services; markup and crawlable sources make the content interpretable without promising ranking gains.
+
+## 2026-10-29: Rebalance research figure scale and placement
+
+- Assumptions/decisions: Put Too Consistent and TAPS copy to the left of proportionally smaller figures on desktop. Keep denser, multi-panel figures wider but cap their width separately. Stack these two studies below 1100 px to keep the figures legible.
+- Tradeoffs/deviations: Preserve every plot's aspect ratio and the TAPS module's natural reported height. Move TAPS's interaction guide into the left text column instead of cropping or scaling its iframe.
+- Implementation notes: Restrict detection and TAPS to approximately 620–650 px; cap Beyond Reasoning at 920 px and Knowledgeable-R1 at 940 px. Bring other figures into a 500–560 px supporting range. Keep full titles, source links, data, and structured metadata intact.
+- Tests: Local compatibility Jekyll build and whitespace checks passed. Browser checks at 1280, 1024, and 320 px confirmed desktop side-by-side placement, responsive stacking, proportional image scaling, no page overflow, and a working portrait detection figure. TAPS resized naturally from 697 px high at 620 px wide to 528 px high at 290 px wide; pause and native slider controls still returned the expected 50.45% coverage comparison (41.3% / 37.3% / 33.3% risk). Eight complete paper headings, unique anchors, and all eight structured article records remain intact. No browser warnings/errors; independent DOM/CSS review passed.
+- Follow-ups: None identified.
+
+## 2026-10-29: Match TAPS illustration height to its copy
+
+- Assumptions/decisions: Make the complete desktop TAPS figure approximately as tall as its left text, rather than merely reducing its maximum width. Remove the requested closing research-thread statement.
+- Tradeoffs/deviations: Keep the plot's aspect ratio and automatic iframe height. Compact the module's text and spacing while retaining a separate phone typography rule; keep the original data and interaction unchanged.
+- Implementation notes: Cap the TAPS figure at 480 px in both column and stacked layouts, balance its two columns within 1060 px, and move the static-paper resource disclosure into the text column. Remove the duplicate outer credit while retaining the author's visible module credit and project links. Delete the closing footer and its unused styles.
+- Tests: Local compatibility build and whitespace checks passed. At 1280 px, the left copy measured 561 px high and the complete right figure 548 px high at 480 px wide. At 320 px, the iframe resized to 482 px with no page overflow; labels and all controls remained visible. Native pause/slider checks preserved the 50.45% coverage result (41.3% / 37.3% / 33.3% risk). Verified removal of the closing block and unused styles, valid unique anchors, and all eight structured paper records. No browser warnings/errors.
+- Follow-ups: None identified.
+
+## 2026-10-29: Stack the Blinded figure panels vertically
+
+- Assumptions/decisions: Keep the existing (a,b) block intact and move (c) beneath it so the right-column figure can show larger lettering.
+- Tradeoffs/deviations: Recompose cropped original vector panels rather than redraw them. Retain the unmodified original figure assets and paper citation.
+- Implementation notes: Preserve a reproducible PDF-to-SVG reflow script and document exact panel bounds. The derived 228 × 263 pt asset places C below AB with a 10 pt gap.
+- Tests: Original-panel bounds were independently checked. Render comparison after translation gives mean channel difference 0.0075/255, consistent with antialiasing; all arrows, text, and labels are retained. Deterministic rebuild from another working directory, SVG XML, no-raster check, local compatibility build, and whitespace checks passed. Browser QA confirmed the complete stacked figure at 400 px on desktop and 290 px on a 320 px screen, without page overflow.
+- Follow-ups: None identified.
+
+## 2026-10-29: Stack the factual-recall plots beside their explanation
+
+- Assumptions/decisions: Place the full Beyond Reasoning text on the left and the three model plots in a vertical right-hand column.
+- Tradeoffs/deviations: Retain original vector panels and unequal y-axis ranges, with a single shared legend. Move the result explanation to the text column rather than widen the portrait figure.
+- Implementation notes: Preserve exact crop bounds and aligned plotting-area offsets in a standalone reflow script. Keep the original horizontal figure and link an enlarged vertical PDF from the page.
+- Tests: Panel/legend crops and alignment offsets were independently verified; rendered results retain every original curve, tick, model title, and axis label. Deterministic rebuild from another working directory, valid SVG XML, no-raster/external-reference checks, local compatibility build, whitespace, unique IDs, and eight structured paper records passed. Browser QA at 1280 px measured left text at 564 px and the portrait figure at 587 px; at 320 px the figure stayed at 280 px with no horizontal overflow. Obsolete horizontal-pan guidance and unused figure-heading styles were removed.
+- Follow-ups: None identified.
+
+## 2026-10-29: Correct shared recall-figure labels and balance its frame
+
+- Assumptions/decisions: Natural Questions is the common dataset for all three model panels. Move the dataset and shared metric label into one caption beneath the complete figure.
+- Tradeoffs/deviations: Keep original curves, titles, ticks, and individual y-axis ranges. Show the shared sample-budget label once below the last panel.
+- Implementation notes: Crop out the first panel's shared labels, use equal-width panel crops with symmetric horizontal padding, and add top/bottom breathing room. Constrain the complete study to a centered 960 px frame with equal columns and the same 64 px gap used by TAPS.
+- Tests: Independent review confirmed shared-label removal, full tick preservation, one common x-axis label, and 43/49 pt visible side gutters. Deterministic export, self-contained SVG/no raster, local compatibility build, whitespace, and caption-link checks passed. Browser QA at 1280 px verified the centered 960 px block, common caption, and 591/652 px text/figure heights; at 320 px it stacks correctly with a 290 px figure and no page overflow. Original curves and individual y-axis ranges remain unchanged.
+- Follow-ups: None identified.

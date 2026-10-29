@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="760" viewBox="0 0 440 760" role="img" aria-labelledby="title desc">
+<title id="title">Self-consistent errors are harder to detect</title>
+<desc id="desc">Five error-detection methods on Qwen2.5-7B-Instruct and TriviaQA. Blue points show AUROC on inconsistent errors and rust points on self-consistent errors, using the same 0.4 to 1.0 scale. Semantic entropy falls from 0.9119 to 0.4453. Source: Table 2, Too Consistent to Detect, EMNLP 2025.</desc>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="440" height="760" fill="#ffffff" rx="4"/>
+<text x="22.000" y="36" font-size="25" fill="#223746" font-weight="normal" text-anchor="start">Consistency can hide errors</text>
+<text x="22.000" y="64" font-size="15" fill="#607180" font-weight="normal" text-anchor="start">Qwen2.5-7B-Instruct / TriviaQA</text>
+<circle cx="26.000" cy="101" r="5" fill="#0076df" stroke="#fff" stroke-width="1.5"/>
+<text x="39.000" y="107" font-size="15" fill="#0076df" font-weight="normal" text-anchor="start">Inconsistent errors</text>
+<circle cx="221.000" cy="101" r="5" fill="#ad654d" stroke="#fff" stroke-width="1.5"/>
+<text x="234.000" y="107" font-size="15" fill="#ad654d" font-weight="normal" text-anchor="start">Self-consistent errors</text>
+<text x="22.000" y="151" font-size="21" fill="#223746" font-weight="normal" text-anchor="start">Token probability</text>
+<text x="418.000" y="152" font-size="13" fill="#607180" font-weight="normal" text-anchor="end">Training-free</text>
+<line x1="34.000" y1="187" x2="406.000" y2="187" stroke="#dde5eb" stroke-width="1"/>
+<line x1="34.000" y1="181" x2="34.000" y2="193" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="181" x2="96.000" y2="193" stroke="#dde5eb" stroke-width="1"/>
+<line x1="158.000" y1="181" x2="158.000" y2="193" stroke="#dde5eb" stroke-width="1"/>
+<line x1="220.000" y1="181" x2="220.000" y2="193" stroke="#dde5eb" stroke-width="1"/>
+<line x1="282.000" y1="181" x2="282.000" y2="193" stroke="#dde5eb" stroke-width="1"/>
+<line x1="344.000" y1="181" x2="344.000" y2="193" stroke="#dde5eb" stroke-width="1"/>
+<line x1="406.000" y1="181" x2="406.000" y2="193" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="175" x2="96.000" y2="200" stroke="#607180" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="118.320" y1="187" x2="229.176" y2="187" stroke="#c8d5df" stroke-width="3"/>
+<circle cx="229.176" cy="187" r="6" fill="#0076df" stroke="#fff" stroke-width="1.5"/>
+<circle cx="118.320" cy="187" r="6" fill="#ad654d" stroke="#fff" stroke-width="1.5"/>
+<text x="229.176" y="173" font-size="18" fill="#0076df" font-weight="normal" text-anchor="middle">0.7148</text>
+<text x="118.320" y="216" font-size="18" fill="#ad654d" font-weight="normal" text-anchor="middle">0.5360</text>
+<text x="22.000" y="262" font-size="21" fill="#223746" font-weight="normal" text-anchor="start">P(True)</text>
+<text x="418.000" y="263" font-size="13" fill="#607180" font-weight="normal" text-anchor="end">Training-free</text>
+<line x1="34.000" y1="298" x2="406.000" y2="298" stroke="#dde5eb" stroke-width="1"/>
+<line x1="34.000" y1="292" x2="34.000" y2="304" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="292" x2="96.000" y2="304" stroke="#dde5eb" stroke-width="1"/>
+<line x1="158.000" y1="292" x2="158.000" y2="304" stroke="#dde5eb" stroke-width="1"/>
+<line x1="220.000" y1="292" x2="220.000" y2="304" stroke="#dde5eb" stroke-width="1"/>
+<line x1="282.000" y1="292" x2="282.000" y2="304" stroke="#dde5eb" stroke-width="1"/>
+<line x1="344.000" y1="292" x2="344.000" y2="304" stroke="#dde5eb" stroke-width="1"/>
+<line x1="406.000" y1="292" x2="406.000" y2="304" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="286" x2="96.000" y2="311" stroke="#607180" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="249.636" y1="298" x2="305.126" y2="298" stroke="#c8d5df" stroke-width="3"/>
+<circle cx="305.126" cy="298" r="6" fill="#0076df" stroke="#fff" stroke-width="1.5"/>
+<circle cx="249.636" cy="298" r="6" fill="#ad654d" stroke="#fff" stroke-width="1.5"/>
+<text x="305.126" y="284" font-size="18" fill="#0076df" font-weight="normal" text-anchor="middle">0.8373</text>
+<text x="249.636" y="327" font-size="18" fill="#ad654d" font-weight="normal" text-anchor="middle">0.7478</text>
+<rect x="12" y="346" width="416" height="103" fill="#fbf3ef" rx="4"/>
+<text x="22.000" y="373" font-size="21" fill="#ad654d" font-weight="bold" text-anchor="start">Semantic entropy</text>
+<text x="418.000" y="374" font-size="13" fill="#607180" font-weight="normal" text-anchor="end">Training-free</text>
+<line x1="34.000" y1="409" x2="406.000" y2="409" stroke="#dde5eb" stroke-width="1"/>
+<line x1="34.000" y1="403" x2="34.000" y2="415" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="403" x2="96.000" y2="415" stroke="#dde5eb" stroke-width="1"/>
+<line x1="158.000" y1="403" x2="158.000" y2="415" stroke="#dde5eb" stroke-width="1"/>
+<line x1="220.000" y1="403" x2="220.000" y2="415" stroke="#dde5eb" stroke-width="1"/>
+<line x1="282.000" y1="403" x2="282.000" y2="415" stroke="#dde5eb" stroke-width="1"/>
+<line x1="344.000" y1="403" x2="344.000" y2="415" stroke="#dde5eb" stroke-width="1"/>
+<line x1="406.000" y1="403" x2="406.000" y2="415" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="397" x2="96.000" y2="422" stroke="#607180" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="62.086" y1="409" x2="351.378" y2="409" stroke="#c8d5df" stroke-width="3"/>
+<circle cx="351.378" cy="409" r="6" fill="#0076df" stroke="#fff" stroke-width="1.5"/>
+<circle cx="62.086" cy="409" r="6" fill="#ad654d" stroke="#fff" stroke-width="1.5"/>
+<text x="351.378" y="395" font-size="18" fill="#0076df" font-weight="normal" text-anchor="middle">0.9119</text>
+<text x="62.086" y="438" font-size="18" fill="#ad654d" font-weight="normal" text-anchor="middle">0.4453</text>
+<text x="22.000" y="484" font-size="21" fill="#223746" font-weight="normal" text-anchor="start">Probe (in-domain)</text>
+<text x="418.000" y="485" font-size="13" fill="#607180" font-weight="normal" text-anchor="end">Supervised</text>
+<line x1="34.000" y1="520" x2="406.000" y2="520" stroke="#dde5eb" stroke-width="1"/>
+<line x1="34.000" y1="514" x2="34.000" y2="526" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="514" x2="96.000" y2="526" stroke="#dde5eb" stroke-width="1"/>
+<line x1="158.000" y1="514" x2="158.000" y2="526" stroke="#dde5eb" stroke-width="1"/>
+<line x1="220.000" y1="514" x2="220.000" y2="526" stroke="#dde5eb" stroke-width="1"/>
+<line x1="282.000" y1="514" x2="282.000" y2="526" stroke="#dde5eb" stroke-width="1"/>
+<line x1="344.000" y1="514" x2="344.000" y2="526" stroke="#dde5eb" stroke-width="1"/>
+<line x1="406.000" y1="514" x2="406.000" y2="526" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="508" x2="96.000" y2="533" stroke="#607180" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="320.812" y1="520" x2="372.954" y2="520" stroke="#c8d5df" stroke-width="3"/>
+<circle cx="372.954" cy="520" r="6" fill="#0076df" stroke="#fff" stroke-width="1.5"/>
+<circle cx="320.812" cy="520" r="6" fill="#ad654d" stroke="#fff" stroke-width="1.5"/>
+<text x="372.954" y="506" font-size="18" fill="#0076df" font-weight="normal" text-anchor="middle">0.9467</text>
+<text x="320.812" y="549" font-size="18" fill="#ad654d" font-weight="normal" text-anchor="middle">0.8626</text>
+<text x="22.000" y="595" font-size="21" fill="#223746" font-weight="normal" text-anchor="start">Probe + cross-model</text>
+<text x="418.000" y="596" font-size="13" fill="#607180" font-weight="normal" text-anchor="end">Supervised</text>
+<line x1="34.000" y1="631" x2="406.000" y2="631" stroke="#dde5eb" stroke-width="1"/>
+<line x1="34.000" y1="625" x2="34.000" y2="637" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="625" x2="96.000" y2="637" stroke="#dde5eb" stroke-width="1"/>
+<line x1="158.000" y1="625" x2="158.000" y2="637" stroke="#dde5eb" stroke-width="1"/>
+<line x1="220.000" y1="625" x2="220.000" y2="637" stroke="#dde5eb" stroke-width="1"/>
+<line x1="282.000" y1="625" x2="282.000" y2="637" stroke="#dde5eb" stroke-width="1"/>
+<line x1="344.000" y1="625" x2="344.000" y2="637" stroke="#dde5eb" stroke-width="1"/>
+<line x1="406.000" y1="625" x2="406.000" y2="637" stroke="#dde5eb" stroke-width="1"/>
+<line x1="96.000" y1="619" x2="96.000" y2="644" stroke="#607180" stroke-width="1.2" stroke-dasharray="3 4"/>
+<line x1="349.456" y1="631" x2="387.152" y2="631" stroke="#c8d5df" stroke-width="3"/>
+<circle cx="387.152" cy="631" r="6" fill="#0076df" stroke="#fff" stroke-width="1.5"/>
+<circle cx="349.456" cy="631" r="6" fill="#ad654d" stroke="#fff" stroke-width="1.5"/>
+<text x="387.152" y="617" font-size="18" fill="#0076df" font-weight="normal" text-anchor="middle">0.9696</text>
+<text x="349.456" y="660" font-size="18" fill="#ad654d" font-weight="normal" text-anchor="middle">0.9088</text>
+<text x="34.000" y="691" font-size="16" fill="#607180" font-weight="normal" text-anchor="middle">0.4</text>
+<text x="96.000" y="691" font-size="16" fill="#607180" font-weight="normal" text-anchor="middle">0.5</text>
+<text x="158.000" y="691" font-size="16" fill="#607180" font-weight="normal" text-anchor="middle">0.6</text>
+<text x="220.000" y="691" font-size="16" fill="#607180" font-weight="normal" text-anchor="middle">0.7</text>
+<text x="282.000" y="691" font-size="16" fill="#607180" font-weight="normal" text-anchor="middle">0.8</text>
+<text x="344.000" y="691" font-size="16" fill="#607180" font-weight="normal" text-anchor="middle">0.9</text>
+<text x="406.000" y="691" font-size="16" fill="#607180" font-weight="normal" text-anchor="middle">1.0</text>
+<text x="22.000" y="729" font-size="15" fill="#607180" font-weight="normal" text-anchor="start">AUROC: higher is better</text>
+<text x="418.000" y="729" font-size="15" fill="#607180" font-weight="normal" text-anchor="end">0.5 = chance</text>
+</g></svg>

@@ -2,6 +2,9 @@
 
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
+{% if page.research_catalog %}
+  {% include knowledge_boundaries_metadata.liquid %}
+{% endif %}
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
@@ -71,7 +74,7 @@
   {% endif %}
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url}}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+<link rel="canonical" href="{{ page.canonical_url | default: page.url | replace:'index.html','' | absolute_url }}">
 
 <!-- Dark Mode -->
 <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>

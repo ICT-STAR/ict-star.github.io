@@ -1,0 +1,209 @@
+{
+  "checked_on": "2026-10-29",
+  "sources": {
+    "beyond_reasoning": {
+      "title": "Beyond Reasoning: Reinforcement Learning Unlocks Parametric Knowledge in LLMs",
+      "url": "https://arxiv.org/abs/2605.07153v1",
+      "pdf_url": "https://arxiv.org/pdf/2605.07153v1",
+      "table_url": "https://arxiv.org/pdf/2605.07153v1#page=4",
+      "version": "arXiv v1, 8 May 2026",
+      "location": "Table 1, PDF page 4; experimental setup in Section 2.3, PDF page 3",
+      "verification": "Values checked against extracted PDF text and rendered original Table 1."
+    },
+    "too_consistent": {
+      "title": "Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs",
+      "url": "https://aclanthology.org/2025.emnlp-main.238/",
+      "pdf_url": "https://aclanthology.org/2025.emnlp-main.238.pdf",
+      "table_url": "https://aclanthology.org/2025.emnlp-main.238.pdf#page=4",
+      "version": "EMNLP 2025 published version",
+      "location": "Table 2, PDF page 4 (proceedings page 4758); subset construction in Section 3.1, PDF page 3",
+      "verification": "Values and the two distinct cross-model rows checked against extracted PDF text and rendered original Table 2."
+    }
+  },
+  "recall": {
+    "source": "beyond_reasoning",
+    "metric": "Accuracy",
+    "unit": "percent",
+    "direction": "higher",
+    "default_model": "qwen",
+    "default_dataset": "nq",
+    "before_label": "Before RL",
+    "after_label": "After RL",
+    "models": [
+      {
+        "id": "llama",
+        "label": "Llama-3.1-8B-Instruct"
+      },
+      {
+        "id": "olmo",
+        "label": "OLMo-2-7B-Instruct"
+      },
+      {
+        "id": "qwen",
+        "label": "Qwen2.5-7B-Instruct"
+      }
+    ],
+    "datasets": [
+      {
+        "id": "tqa",
+        "label": "TriviaQA"
+      },
+      {
+        "id": "nq",
+        "label": "Natural Questions"
+      },
+      {
+        "id": "pqa",
+        "label": "PopQA"
+      },
+      {
+        "id": "sqa",
+        "label": "SimpleQA"
+      }
+    ],
+    "rows": [
+      {
+        "model": "llama",
+        "dataset": "tqa",
+        "before": 63.54,
+        "after": 69.89
+      },
+      {
+        "model": "llama",
+        "dataset": "nq",
+        "before": 30.15,
+        "after": 46.39
+      },
+      {
+        "model": "llama",
+        "dataset": "pqa",
+        "before": 23.52,
+        "after": 31.44
+      },
+      {
+        "model": "llama",
+        "dataset": "sqa",
+        "before": 5.43,
+        "after": 4.74
+      },
+      {
+        "model": "olmo",
+        "dataset": "tqa",
+        "before": 54.86,
+        "after": 65.85
+      },
+      {
+        "model": "olmo",
+        "dataset": "nq",
+        "before": 22.79,
+        "after": 36.91
+      },
+      {
+        "model": "olmo",
+        "dataset": "pqa",
+        "before": 21.07,
+        "after": 27.48
+      },
+      {
+        "model": "olmo",
+        "dataset": "sqa",
+        "before": 3.56,
+        "after": 4.33
+      },
+      {
+        "model": "qwen",
+        "dataset": "tqa",
+        "before": 49.39,
+        "after": 59.94
+      },
+      {
+        "model": "qwen",
+        "dataset": "nq",
+        "before": 21.42,
+        "after": 34.12
+      },
+      {
+        "model": "qwen",
+        "dataset": "pqa",
+        "before": 16.96,
+        "after": 22.27
+      },
+      {
+        "model": "qwen",
+        "dataset": "sqa",
+        "before": 4.15,
+        "after": 3.88
+      }
+    ],
+    "setting": "Zero-shot, one-hop, closed-book factual QA; concise answers without explicit chain-of-thought; greedy decoding; fact-level train-test deduplication.",
+    "notes": [
+      "The Base row in Table 1 means the starting instruction-tuned model before this factual RL training, not a pretrained base checkpoint. This differs from base model in BaseCal.",
+      "The RL row uses GRPO with binary semantic-correctness rewards. Values are accuracies in percent; changes should be reported in percentage points unless explicitly computed as relative changes.",
+      "SimpleQA is intentionally included: the paper reports no meaningful improvement there. Do not imply that all models and benchmarks improve.",
+      "These accuracy results alone do not prove knowledge storage or its absence. The paper uses separate accessibility and pass@k analyses to study the mechanism."
+    ]
+  },
+  "self_consistent_errors": {
+    "source": "too_consistent",
+    "model": "Qwen2.5-7B-Instruct",
+    "dataset": "TriviaQA",
+    "paper_dataset_label": "TQA",
+    "metric": "AUROC",
+    "unit": "fraction",
+    "direction": "higher",
+    "chance": 0.5,
+    "default_method": "semantic_entropy",
+    "consistent_label": "Self-consistent errors",
+    "inconsistent_label": "Inconsistent errors",
+    "rows": [
+      {
+        "id": "probability",
+        "label": "Token probability",
+        "consistent": 0.536,
+        "inconsistent": 0.7148,
+        "training": "Training-free",
+        "paper_row": "Probability"
+      },
+      {
+        "id": "p_true",
+        "label": "P(True)",
+        "consistent": 0.7478,
+        "inconsistent": 0.8373,
+        "training": "Training-free",
+        "paper_row": "P(True)"
+      },
+      {
+        "id": "semantic_entropy",
+        "label": "Semantic entropy",
+        "consistent": 0.4453,
+        "inconsistent": 0.9119,
+        "training": "Training-free",
+        "paper_row": "SE"
+      },
+      {
+        "id": "probe_id",
+        "label": "Probe (in-domain)",
+        "consistent": 0.8626,
+        "inconsistent": 0.9467,
+        "training": "Supervised",
+        "paper_row": "Probe (ID)"
+      },
+      {
+        "id": "cross_model_id",
+        "label": "Probe + cross-model",
+        "consistent": 0.9088,
+        "inconsistent": 0.9696,
+        "training": "Supervised",
+        "paper_row": "+ cross-model immediately below Probe (ID)"
+      }
+    ],
+    "setting": "Detection of errors in greedy answers; comparison of CE and IE evaluation subsets as constructed in Section 3.1.",
+    "notes": [
+      "CE means a greedy wrong answer whose 15 stochastic samples are all semantically equivalent to it; IE contains other incorrect answers.",
+      "CE and IE are different subsets, not two evaluation protocols on identical questions. The paper matches negative example counts and positive example counts for supervised training, controlling training-data volume.",
+      "AUROC measures correct-versus-incorrect discrimination, not confidence calibration or response accuracy. Scores are fractions on a 0-to-1 scale; 0.5 is chance discrimination.",
+      "Probe (ID) is trained and evaluated in-domain. Probe + cross-model uses the cross-model row immediately below Probe (ID), not the distinct OOD cross-model row.",
+      "For this generator, the external verifier is Qwen2.5-14B. The cross-model method trains supervised probes on hidden states from both models; it is not training-free."
+    ]
+  }
+}

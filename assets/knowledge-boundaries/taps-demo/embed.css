@@ -1,0 +1,75 @@
+:root {
+  color-scheme: light;
+  --ink: #24292e;
+  --muted: #606c77;
+  --line: #dfe5e9;
+  --surface: #fff;
+  --accent: #0076df;
+  --selective: #6e93ae;
+  --fixed: #936b9d;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #edf0f2;
+  --muted: #b0b9c1;
+  --line: #424246;
+  --surface: #1c1c1d;
+  --accent: #2698ba;
+  --selective: #a6c6db;
+  --fixed: #c4abd2;
+}
+* { box-sizing: border-box; }
+html { background: transparent; }
+body { margin: 0; color: var(--ink); background: transparent; font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.hero-result { width: 100%; max-width: 860px; margin: 0 auto; }
+.chart-topline { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; color: var(--muted); font-size: 11px; }
+button { border: 1px solid var(--line); background: var(--surface); color: var(--accent); padding: 5px 9px; border-radius: 3px; font: inherit; font-size: 11px; cursor: pointer; }
+:is(button,input,a):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.chart-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; font-size: 11px; }
+.chart-legend > span { display: flex; align-items: center; gap: 6px; }
+.light-blue { color: var(--selective); }
+.light-orange { color: var(--accent); }
+.light-purple { color: var(--fixed); }
+.line-key { width: 20px; border-top: 2px solid currentColor; }
+.blue-key { border-top-style: dashed; }
+.point-key { width: 7px; height: 7px; background: var(--fixed); }
+.risk-chart { margin-top: 4px; }
+.risk-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.risk-chart text { font-family: inherit; font-size: 20px; fill: var(--muted); }
+.risk-chart .axis-title { font-size: 24px; }
+.risk-chart .baseline-label { font-size: 22px; fill: var(--fixed); }
+.risk-chart [stroke="#345064"] { stroke: var(--line); }
+.risk-chart [stroke="#A0D3F2"] { stroke: var(--selective); }
+.risk-chart [stroke="#F2AD85"] { stroke: var(--accent); }
+.risk-chart [data-baseline] { fill: var(--fixed); }
+#baseline-highlight { stroke: var(--fixed); }
+#chart-guide { stroke: var(--muted); }
+#selective-point { fill: var(--selective); stroke: var(--surface); }
+#taps-point { fill: var(--accent); stroke: var(--surface); }
+.coverage-control { margin: 0 4.68% 0 9.49%; }
+.coverage-control[hidden] { display: none; }
+.coverage-control output { display: block; text-align: right; color: var(--accent); font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.coverage-control input { display: block; width: 100%; margin: 5px 0; accent-color: var(--accent); height: 20px; cursor: ew-resize; }
+.range-endpoints { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; }
+.hero-readouts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; border-top: 1px solid var(--line); margin: 10px 4.68% 0 9.49%; padding-top: 9px; text-align: center; }
+.hero-readouts p { margin: 0; }
+.hero-readouts p > span { display: block; color: var(--selective); font-size: 11px; line-height: 1.4; }
+.hero-readouts p > strong { display: block; margin-top: 4px; color: var(--selective); font-size: 22px; font-weight: 400; line-height: 1.3; font-variant-numeric: tabular-nums; }
+.hero-readouts small { font-size: .6em; margin-left: 2px; }
+.hero-readouts .abstention-readout :is(span,strong) { color: var(--fixed); }
+.hero-readouts .taps-readout :is(span,strong) { color: var(--accent); }
+.no-js,.demo-credit { font-size: 10px; color: var(--muted); }
+.demo-credit { margin: 10px auto 2px; max-width: 860px; }
+.demo-credit a { color: var(--accent); text-underline-offset: 2px; }
+@media (max-width:480px) {
+  .chart-topline { flex-wrap: wrap; }
+}
+@media (max-width:360px) {
+  .risk-chart text { font-size: 24px; }
+  .risk-chart .axis-title { font-size: 28px; }
+  .risk-chart .baseline-label { font-size: 24px; }
+  .hero-readouts { margin-left: 0; margin-right: 0; gap: 8px; }
+  .hero-readouts p > span { font-size: 11px; min-height: 2.8em; }
+  .coverage-control input { height: 22px; }
+  .demo-credit { font-size: 11px; }
+}

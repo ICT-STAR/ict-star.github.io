@@ -193,6 +193,7 @@ exclude:
   - INSTALL.md
   - implementation-notes.md
   - _scripts/model-editing-figure/
+  - _scripts/knowledge-boundaries-figures/
   - LICENSE
   - lighthouse_results/
   - package.json

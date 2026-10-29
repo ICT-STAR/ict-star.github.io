@@ -1,0 +1,95 @@
+{% assign kb_catalog = site.data.knowledge_publications %}
+{% assign kb_page_url = page.canonical_url | default: page.url | replace: 'index.html', '' | absolute_url %}
+{% assign kb_site_url = kb_page_url | remove: page.url %}
+{% assign kb_root_url = kb_site_url | append: '/' %}
+{% assign kb_project_id = kb_page_url | append: '#research-project' %}
+{% assign kb_page_id = kb_page_url | append: '#webpage' %}
+{% assign kb_list_id = kb_page_url | append: '#publications' %}
+{% assign kb_group_id = kb_root_url | append: '#organization' %}
+{% assign kb_social_image = kb_site_url | append: '/assets/img/project/cover/knowledge-boundaries-social.png' %}
+{% unless site.serve_og_meta %}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ kb_catalog.name | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ kb_page_url | escape }}">
+<meta property="og:image" content="{{ kb_social_image | escape }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="From latent knowledge to reliable answers: a STAR Group research thread on knowledge boundaries and uncertainty in language models.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ kb_catalog.name | escape }}">
+<meta name="twitter:description" content="{{ page.description | escape }}">
+<meta name="twitter:image" content="{{ kb_social_image | escape }}">
+<meta name="twitter:image:alt" content="From latent knowledge to reliable answers: knowledge boundaries, uncertainty, and reliable generation.">
+{% endunless %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": {{ kb_group_id | jsonify }},
+      "name": "STAR Group",
+      "url": {{ kb_root_url | jsonify }}
+    },
+    {
+      "@type": "ResearchProject",
+      "@id": {{ kb_project_id | jsonify }},
+      "name": {{ kb_catalog.name | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "url": {{ kb_page_url | jsonify }},
+      "parentOrganization": { "@id": {{ kb_group_id | jsonify }} },
+      "knowsAbout": {{ kb_catalog.keywords | jsonify }},
+      "subjectOf": { "@id": {{ kb_page_id | jsonify }} }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": {{ kb_page_id | jsonify }},
+      "name": {{ kb_catalog.name | jsonify }},
+      "alternativeHeadline": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "url": {{ kb_page_url | jsonify }},
+      "inLanguage": "en",
+      "datePublished": {{ page.date | date: '%Y-%m-%d' | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date: '%Y-%m-%d' | jsonify }},
+      "image": {{ kb_social_image | jsonify }},
+      {% if page.research_markdown %}"encoding": { "@type": "MediaObject", "encodingFormat": "text/markdown", "contentUrl": {{ page.research_markdown | prepend: kb_site_url | jsonify }} },{% endif %}
+      "publisher": { "@id": {{ kb_group_id | jsonify }} },
+      "about": { "@id": {{ kb_project_id | jsonify }} },
+      "keywords": {{ kb_catalog.keywords | jsonify }},
+      "mainEntity": { "@id": {{ kb_list_id | jsonify }} },
+      "citation": [{% for paper in kb_catalog.papers %}{% if paper.doi %}{% assign kb_paper_id = paper.doi | prepend: 'https://doi.org/' %}{% else %}{% assign kb_paper_id = paper.url %}{% endif %}{ "@id": {{ kb_paper_id | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}]
+    },
+    {
+      "@type": "ItemList",
+      "@id": {{ kb_list_id | jsonify }},
+      "name": "Publications in this research thread",
+      "numberOfItems": {{ kb_catalog.papers | size }},
+      "itemListElement": [{% for paper in kb_catalog.papers %}{% if paper.doi %}{% assign kb_paper_id = paper.doi | prepend: 'https://doi.org/' %}{% else %}{% assign kb_paper_id = paper.url %}{% endif %}{% assign kb_section_url = kb_page_url | append: '#' | append: paper.id %}
+        { "@type": "ListItem", "position": {{ forloop.index }}, "name": {{ paper.title | jsonify }}, "url": {{ kb_section_url | jsonify }}, "item": { "@id": {{ kb_paper_id | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    }{% for paper in kb_catalog.papers %}{% if paper.doi %}{% assign kb_paper_id = paper.doi | prepend: 'https://doi.org/' %}{% else %}{% assign kb_paper_id = paper.url %}{% endif %},
+    {
+      "@type": "ScholarlyArticle",
+      "@id": {{ kb_paper_id | jsonify }},
+      "name": {{ paper.title | jsonify }},
+      "headline": {{ paper.title | jsonify }},
+      "description": {{ paper.summary | jsonify }},
+      "url": {{ paper.url | jsonify }},
+      "inLanguage": "en",
+      "datePublished": {{ paper.publication_date | jsonify }},
+      {% if paper.modified_date %}"dateModified": {{ paper.modified_date | jsonify }},{% endif %}
+      "creativeWorkStatus": {{ paper.status | jsonify }},
+      "version": {{ paper.version | jsonify }},
+      "author": [{% for author in paper.authors %}{ "@type": "Person", "name": {{ author | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}],
+      "publisher": { "@type": "Organization", "name": {{ paper.publisher | jsonify }}, "url": {{ paper.publisher_url | jsonify }} },
+      "isPartOf": { "@type": "CreativeWork", "name": {{ paper.venue_full | jsonify }} },
+      "keywords": {{ paper.keywords | jsonify }},
+      {% if paper.doi %}"identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": {{ paper.doi | jsonify }} },{% endif %}
+      "encoding": { "@type": "MediaObject", "encodingFormat": "application/pdf", "contentUrl": {{ paper.pdf | jsonify }} },
+      "subjectOf": { "@id": {{ kb_page_id | jsonify }} }
+    }{% endfor %}
+  ]
+}
+</script>
